@@ -14,6 +14,3 @@ https://public-api.wordpress.com/rest/v1.1/sites/augustobgm.wordpress.com/posts/
 
 # Front-end framework
 Vue.js
-
-# UI Library
-Vuetify (Material design)
