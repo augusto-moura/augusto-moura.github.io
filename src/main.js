@@ -15,15 +15,31 @@ require('@fortawesome/fontawesome-free');
 window.axios = require('axios');
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-
 import Vue from 'vue'
 import App from './App.vue'
+import VueRouter from 'vue-router'
+import Home from './components/pages/Home'
+import SoftwareDevelopment from './components/pages/SoftwareDevelopment'
+import Games from './components/pages/Games'
 
 Vue.config.productionTip = false
 
 const files = require.context('./', true, /\.vue$/i)
 files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
+//Vue router
+Vue.use(VueRouter)
+
+const router = new VueRouter({
+	routes: [
+		{ path: '/', component: Home },
+		{ path: '/development', component: SoftwareDevelopment },
+		{ path: '/games', component: Games }
+	]
+})
+
+//Vue app
 new Vue({
 	render: h => h(App),
+	router
 }).$mount('#app')
