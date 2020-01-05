@@ -11934,3 +11934,7 @@ a.text-dark:focus {
   }
 }
 
+img {
+  max-width: 100%;
+}
+
