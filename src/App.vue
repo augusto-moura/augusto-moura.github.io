@@ -30,7 +30,7 @@
 							class="nav-link btn btn-link navbar-text w-100"
 							data-toggle="collapse" data-target=".navbar-collapse.show"
 						>
-							{{ menuItem.title }}
+							<i :class="menuItem.icon"></i> {{ menuItem.title }}
 						</router-link>
 					</li>
 				</ul>
@@ -58,9 +58,9 @@ export default {
 	data() {
 		return {
 			menu: [
-				{ id: 1, title: "Home", path: '/' },
-				{ id: 2, title: "Desenvolvimento de software", path: '/development' },
-				{ id: 3, title: "Jogos", path: '/games' }
+				{ id: 1, title: "Home", path: '/', icon: 'fas fa-home' },
+				{ id: 2, title: "Desenvolvimento de software", path: '/development', icon: 'fas fa-code' },
+				{ id: 3, title: "Jogos", path: '/games', icon: 'fas fa-gamepad' }
 			]
 		};
 	},
@@ -73,8 +73,13 @@ export default {
 </script>
 
 <style scoped>
-	.main-content {
+	.main-content,
+	.navbar .navbar-text,
+	footer {
 		font-family: Roboto, sans-serif;
+	}
+
+	.main-content {
 		text-align: justify;
 	}
 
@@ -86,10 +91,10 @@ export default {
 
 	.router-link-exact-active {
 		font-weight: bold;
+		color: black;
 	}
 
-	.navbar .navbar-text {
-		font-family: Roboto, sans-serif;
+	.navbar .navbar-text:not(.router-link-exact-active) {
 		color: #cea2a4;
 	}
 

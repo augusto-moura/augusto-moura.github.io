@@ -39,6 +39,9 @@
 	> - Titanish
 	> - AugustoTitan
 
+* Backlog
+	> I keep a constantly updated record of what games I have ever played, beaten or completed. Check it out!
+
 * Speedrunning
 	> The act of speedrunning consists of beating a game as fast as possible considering a set of rules.  
 	Since 2015, I have amassed a collection of speedruns, of which I am very proud!
