@@ -44,7 +44,7 @@ export default {
 			this.searchJewels();
 		},
 		searchJewels(){
-			fetch(`http://public-api.wordpress.com/rest/v1.1/sites/augustobgm.wordpress.com/posts/?category=J%C3%B3ias%20do%20passado&order_by=title&order=${this.order}&fields=ID,title,date,content,slug,featured_image,tags`, {
+			fetch(`https://public-api.wordpress.com/rest/v1.1/sites/augustobgm.wordpress.com/posts/?category=J%C3%B3ias%20do%20passado&order_by=title&order=${this.order}&fields=ID,title,date,content,slug,featured_image,tags`, {
 				headers: new Headers({
 					'User-agent': 'Mozilla/4.0 Custom User Agent'
 				})
