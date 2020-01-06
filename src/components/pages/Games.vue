@@ -13,7 +13,7 @@
 		<hr>
 		
 		<a href="http://backloggery.com/88titan88" target="_blank" class="link-with-card">
-			<div class="card mb-2 clickable-card">
+			<div class="card mb-2 border-primary clickable-card">
 				<div class="card-body">
 					<h5 class="card-title">
 						Backlog
@@ -29,7 +29,7 @@
 			</div>
 		</a>
 
-		<div class="card mb-2 clickable-card" @click="$router.push('/speedrun')">
+		<div class="card mb-2 clickable-card border-primary" @click="$router.push('/speedrun')">
 			<div class="card-body">
 				<h5 class="card-title">Speedrun</h5>
 				<p class="card-text">
@@ -41,7 +41,7 @@
 			</div>
 		</div>
 
-		<div class="card mb-2 clickable-card" @click="$router.push('/joias')">
+		<div class="card mb-2 clickable-card border-primary" @click="$router.push('/joias')">
 			<div class="card-body">
 				<h5 class="card-title">Jóias do passado</h5>
 				<p class="card-text">
@@ -50,7 +50,7 @@
 			</div>
 		</div>
 
-		<div class="card clickable-card" @click="$router.push('/fangames')">
+		<div class="card clickable-card border-primary" @click="$router.push('/fangames')">
 			<div class="card-body">
 				<h5 class="card-title">Fan games</h5>
 				<p class="card-text">
@@ -83,7 +83,7 @@ export default {
 	}
 
 	.clickable-card:hover {
-		background-color: #cea2a4;
+		background-color: #cc6f73;
 		color: white;
 	}
 </style>

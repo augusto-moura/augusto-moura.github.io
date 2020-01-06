@@ -38,7 +38,7 @@
 		</nav>		
 		<div class="container-fluid">
 			<div class="row justify-content-center">
-				<div class="main-content col-sm-8 col-md-6 pt-4">
+				<div class="main-content col-md-8 pt-4">
 					<router-view></router-view>
 				</div>
 			</div>
@@ -95,7 +95,7 @@ export default {
 	}
 
 	.navbar .navbar-text:not(.router-link-exact-active) {
-		color: #cea2a4;
+		color: #cc6f73;
 	}
 
 	.nav-link {
