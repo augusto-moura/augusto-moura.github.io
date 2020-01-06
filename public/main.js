@@ -2821,6 +2821,46 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2851,6 +2891,66 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.searchJewels();
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./src/components/pages/JoiasListaJogos.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/pages/JoiasListaJogos.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_0__);
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      jewelsListPage: null
+    };
+  },
+  methods: {
+    getJewelsListPage: function getJewelsListPage() {
+      var _this = this;
+
+      fetch("https://public-api.wordpress.com/rest/v1.1/sites/augustobgm.wordpress.com/posts/slug:joias-do-passado-lista-de-jogos", {
+        headers: new Headers({
+          'User-agent': 'Mozilla/4.0 Custom User Agent'
+        })
+      }).then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        _this.jewelsListPage = data;
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getJewelsListPage();
   }
 });
 
@@ -10187,6 +10287,24 @@ var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, "\n.illustration-credit a {\n\tcolor: #cacaca;\n}\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./src/components/pages/JoiasDoPassado.vue?vue&type=style&index=0&id=284400f5&scoped=true&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./src/components/pages/JoiasDoPassado.vue?vue&type=style&index=0&id=284400f5&scoped=true&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "\n.game-cover[data-v-284400f5] {\n\tmax-height: 140px;\n}\n\n/* https://www.gradient-animator.com */\n.joia-atual[data-v-284400f5] {\n\tbackground: -webkit-gradient(linear, right top, left top, from(#cc6f73), to(#f8f9fa));\n\tbackground: linear-gradient(270deg, #cc6f73, #f8f9fa);\n\tbackground-size: 400% 400%;\n\t-webkit-animation: JoiaAtual-data-v-284400f5 2s ease infinite;\n\tanimation: JoiaAtual-data-v-284400f5 2s ease infinite;\n}\n@-webkit-keyframes JoiaAtual-data-v-284400f5 {\n0%{background-position:0% 50%}\n50%{background-position:100% 50%}\n100%{background-position:0% 50%}\n}\n@keyframes JoiaAtual-data-v-284400f5 {\n0%{background-position:0% 50%}\n50%{background-position:100% 50%}\n100%{background-position:0% 50%}\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -24003,6 +24121,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./src/components/pages/JoiasDoPassado.vue?vue&type=style&index=0&id=284400f5&scoped=true&lang=css&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./src/components/pages/JoiasDoPassado.vue?vue&type=style&index=0&id=284400f5&scoped=true&lang=css& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./JoiasDoPassado.vue?vue&type=style&index=0&id=284400f5&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./src/components/pages/JoiasDoPassado.vue?vue&type=style&index=0&id=284400f5&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/lib/addStyles.js":
 /*!****************************************************!*\
   !*** ./node_modules/style-loader/lib/addStyles.js ***!
@@ -24964,17 +25112,17 @@ var staticRenderFns = [
         )
       ]),
       _vm._v(" "),
-      _c("img", {
-        attrs: {
-          src:
-            "https://augustobgm.files.wordpress.com/2020/01/programmer-illustration.png",
-          alt: "Image with programmer"
-        }
-      }),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
       _c("div", { staticClass: "w-100 text-center" }, [
+        _c("img", {
+          attrs: {
+            src:
+              "https://augustobgm.files.wordpress.com/2020/01/programmer-illustration.png",
+            alt: "Image with programmer"
+          }
+        }),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
         _c(
           "small",
           { staticClass: "text-muted text-secondary illustration-credit" },
@@ -25004,10 +25152,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/pages/JoiasDoPassado.vue?vue&type=template&id=284400f5&":
-/*!**************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/pages/JoiasDoPassado.vue?vue&type=template&id=284400f5& ***!
-  \**************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/pages/JoiasDoPassado.vue?vue&type=template&id=284400f5&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/pages/JoiasDoPassado.vue?vue&type=template&id=284400f5&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -25020,38 +25168,79 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c(
-      "button",
-      {
-        class:
-          "btn " +
-          (_vm.order == "DESC" ? "btn-primary" : "btn-outline-primary"),
-        on: {
-          click: function($event) {
-            return _vm.changeOrder("DESC")
-          }
-        }
-      },
-      [
-        _c("i", { staticClass: "fas fa-sort-numeric-down-alt fa-fw" }),
-        _vm._v("\n\t\tRecentes primeiro\n\t")
-      ]
-    ),
+    _vm._m(0),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n\t\tSempre temos intenção de jogar mais do que conseguimos. No Jóias do Passado, jogaremos algumas pérolas (gemas?) dos jogos antigos que deixei passar, desde o Nintendinho até algumas gerações atrás, como o Wii.\n\t"
+      )
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "\n\t\tAlgum jogo que você adora não consta na lista de jogos? Veja se eu já não joguei e envie uma mensagem privada para mim no Discord em AugustoTitan#8263 !\n\t"
+      )
+    ]),
     _vm._v(" "),
     _c(
-      "button",
+      "h3",
+      { staticClass: "text-center" },
+      [
+        _c(
+          "router-link",
+          { staticClass: "text-primary", attrs: { to: "/joias/lista" } },
+          [_c("u", [_vm._v("Lista de jogos (clique para abrir)")])]
+        )
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c("hr"),
+    _vm._v(" "),
+    _c("h3", { staticClass: "text-primary" }, [_vm._v("Análises")]),
+    _vm._v(" "),
+    _c(
+      "div",
       {
-        class:
-          "btn " + (_vm.order == "ASC" ? "btn-primary" : "btn-outline-primary"),
-        on: {
-          click: function($event) {
-            return _vm.changeOrder("ASC")
-          }
-        }
+        staticClass: "btn-group",
+        attrs: { role: "group", "aria-label": "Alterar ordem de exibição" }
       },
       [
-        _c("i", { staticClass: "fas fa-sort-numeric-down fa-fw" }),
-        _vm._v("\n\t\tAntigos primeiro\n\t")
+        _c(
+          "button",
+          {
+            class:
+              "btn " +
+              (_vm.order == "DESC" ? "btn-primary" : "btn-outline-primary"),
+            on: {
+              click: function($event) {
+                return _vm.changeOrder("DESC")
+              }
+            }
+          },
+          [
+            _c("i", { staticClass: "fas fa-sort-numeric-down-alt fa-fw" }),
+            _vm._v("\n\t\t\tRecentes primeiro\n\t\t")
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            class:
+              "btn " +
+              (_vm.order == "ASC" ? "btn-primary" : "btn-outline-primary"),
+            on: {
+              click: function($event) {
+                return _vm.changeOrder("ASC")
+              }
+            }
+          },
+          [
+            _c("i", { staticClass: "fas fa-sort-numeric-down fa-fw" }),
+            _vm._v("\n\t\t\tAntigos primeiro\n\t\t")
+          ]
+        )
       ]
     ),
     _vm._v(" "),
@@ -25059,14 +25248,102 @@ var render = function() {
       ? _c(
           "div",
           _vm._l(_vm.jewels, function(jewel) {
-            return _c("div", { key: jewel.ID, staticClass: "card" }, [
-              _vm._v("\n\t\t\t" + _vm._s(jewel.title) + "\n\t\t")
-            ])
+            return _c(
+              "div",
+              {
+                key: jewel.ID,
+                class:
+                  "card p-3 my-2 " +
+                  ("joia-atual" in jewel.tags ? "joia-atual" : "")
+              },
+              [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-4 text-center" }, [
+                    jewel.featured_image != ""
+                      ? _c("img", {
+                          staticClass: "game-cover mb-3 mb-sm-0",
+                          attrs: { src: jewel.featured_image }
+                        })
+                      : _vm._e()
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-8" }, [
+                    _c("h4", { staticClass: "font-weight-bold" }, [
+                      _vm._v(_vm._s(jewel.title))
+                    ]),
+                    _vm._v(" "),
+                    _c("div", {
+                      domProps: { innerHTML: _vm._s(jewel.content) }
+                    })
+                  ])
+                ])
+              ]
+            )
           }),
           0
         )
       : _vm._e()
   ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-100 text-center" }, [
+      _c("img", {
+        staticClass: "mb-3 rounded",
+        staticStyle: { width: "350px" },
+        attrs: {
+          src:
+            "https://augustobgm.files.wordpress.com/2020/01/joias-do-passado-fundo-escuro.png",
+          alt: "Jóias do passado"
+        }
+      })
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/pages/JoiasListaJogos.vue?vue&type=template&id=522ba0a4&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/pages/JoiasListaJogos.vue?vue&type=template&id=522ba0a4& ***!
+  \***************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("router-link", { attrs: { to: "/joias" } }, [
+        _c("i", { staticClass: "fas fa-chevron-left fa-fw" }),
+        _vm._v("\n\t\tVoltar para Jóias do Passado\n\t")
+      ]),
+      _vm._v(" "),
+      _c("h1", { staticClass: "my-3 text-primary" }, [
+        _vm._v("\n\t\tJóias do Passado - Lista de jogos\n\t")
+      ]),
+      _vm._v(" "),
+      _vm.jewelsListPage
+        ? _c("div", {
+            domProps: { innerHTML: _vm._s(_vm.jewelsListPage.content) }
+          })
+        : _vm._e()
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -40155,6 +40432,7 @@ var map = {
 	"./components/pages/Games.vue": "./src/components/pages/Games.vue",
 	"./components/pages/Home.vue": "./src/components/pages/Home.vue",
 	"./components/pages/JoiasDoPassado.vue": "./src/components/pages/JoiasDoPassado.vue",
+	"./components/pages/JoiasListaJogos.vue": "./src/components/pages/JoiasListaJogos.vue",
 	"./components/pages/SoftwareDevelopment.vue": "./src/components/pages/SoftwareDevelopment.vue",
 	"./components/pages/Speedrun.vue": "./src/components/pages/Speedrun.vue"
 };
@@ -40531,9 +40809,11 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _JoiasDoPassado_vue_vue_type_template_id_284400f5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./JoiasDoPassado.vue?vue&type=template&id=284400f5& */ "./src/components/pages/JoiasDoPassado.vue?vue&type=template&id=284400f5&");
+/* harmony import */ var _JoiasDoPassado_vue_vue_type_template_id_284400f5_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./JoiasDoPassado.vue?vue&type=template&id=284400f5&scoped=true& */ "./src/components/pages/JoiasDoPassado.vue?vue&type=template&id=284400f5&scoped=true&");
 /* harmony import */ var _JoiasDoPassado_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./JoiasDoPassado.vue?vue&type=script&lang=js& */ "./src/components/pages/JoiasDoPassado.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _JoiasDoPassado_vue_vue_type_style_index_0_id_284400f5_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./JoiasDoPassado.vue?vue&type=style&index=0&id=284400f5&scoped=true&lang=css& */ "./src/components/pages/JoiasDoPassado.vue?vue&type=style&index=0&id=284400f5&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -40541,13 +40821,13 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _JoiasDoPassado_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _JoiasDoPassado_vue_vue_type_template_id_284400f5___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _JoiasDoPassado_vue_vue_type_template_id_284400f5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _JoiasDoPassado_vue_vue_type_template_id_284400f5_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _JoiasDoPassado_vue_vue_type_template_id_284400f5_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  null,
+  "284400f5",
   null
   
 )
@@ -40573,19 +40853,104 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/components/pages/JoiasDoPassado.vue?vue&type=template&id=284400f5&":
-/*!********************************************************************************!*\
-  !*** ./src/components/pages/JoiasDoPassado.vue?vue&type=template&id=284400f5& ***!
-  \********************************************************************************/
+/***/ "./src/components/pages/JoiasDoPassado.vue?vue&type=style&index=0&id=284400f5&scoped=true&lang=css&":
+/*!**********************************************************************************************************!*\
+  !*** ./src/components/pages/JoiasDoPassado.vue?vue&type=style&index=0&id=284400f5&scoped=true&lang=css& ***!
+  \**********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_JoiasDoPassado_vue_vue_type_style_index_0_id_284400f5_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader/dist/cjs.js??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./JoiasDoPassado.vue?vue&type=style&index=0&id=284400f5&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./src/components/pages/JoiasDoPassado.vue?vue&type=style&index=0&id=284400f5&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_JoiasDoPassado_vue_vue_type_style_index_0_id_284400f5_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_JoiasDoPassado_vue_vue_type_style_index_0_id_284400f5_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_JoiasDoPassado_vue_vue_type_style_index_0_id_284400f5_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_JoiasDoPassado_vue_vue_type_style_index_0_id_284400f5_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_JoiasDoPassado_vue_vue_type_style_index_0_id_284400f5_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./src/components/pages/JoiasDoPassado.vue?vue&type=template&id=284400f5&scoped=true&":
+/*!********************************************************************************************!*\
+  !*** ./src/components/pages/JoiasDoPassado.vue?vue&type=template&id=284400f5&scoped=true& ***!
+  \********************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_JoiasDoPassado_vue_vue_type_template_id_284400f5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./JoiasDoPassado.vue?vue&type=template&id=284400f5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/pages/JoiasDoPassado.vue?vue&type=template&id=284400f5&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_JoiasDoPassado_vue_vue_type_template_id_284400f5___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_JoiasDoPassado_vue_vue_type_template_id_284400f5_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./JoiasDoPassado.vue?vue&type=template&id=284400f5&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/pages/JoiasDoPassado.vue?vue&type=template&id=284400f5&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_JoiasDoPassado_vue_vue_type_template_id_284400f5_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_JoiasDoPassado_vue_vue_type_template_id_284400f5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_JoiasDoPassado_vue_vue_type_template_id_284400f5_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./src/components/pages/JoiasListaJogos.vue":
+/*!**************************************************!*\
+  !*** ./src/components/pages/JoiasListaJogos.vue ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _JoiasListaJogos_vue_vue_type_template_id_522ba0a4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./JoiasListaJogos.vue?vue&type=template&id=522ba0a4& */ "./src/components/pages/JoiasListaJogos.vue?vue&type=template&id=522ba0a4&");
+/* harmony import */ var _JoiasListaJogos_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./JoiasListaJogos.vue?vue&type=script&lang=js& */ "./src/components/pages/JoiasListaJogos.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _JoiasListaJogos_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _JoiasListaJogos_vue_vue_type_template_id_522ba0a4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _JoiasListaJogos_vue_vue_type_template_id_522ba0a4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "src/components/pages/JoiasListaJogos.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./src/components/pages/JoiasListaJogos.vue?vue&type=script&lang=js&":
+/*!***************************************************************************!*\
+  !*** ./src/components/pages/JoiasListaJogos.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_JoiasListaJogos_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./JoiasListaJogos.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./src/components/pages/JoiasListaJogos.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_JoiasListaJogos_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./src/components/pages/JoiasListaJogos.vue?vue&type=template&id=522ba0a4&":
+/*!*********************************************************************************!*\
+  !*** ./src/components/pages/JoiasListaJogos.vue?vue&type=template&id=522ba0a4& ***!
+  \*********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_JoiasListaJogos_vue_vue_type_template_id_522ba0a4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./JoiasListaJogos.vue?vue&type=template&id=522ba0a4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/pages/JoiasListaJogos.vue?vue&type=template&id=522ba0a4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_JoiasListaJogos_vue_vue_type_template_id_522ba0a4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_JoiasListaJogos_vue_vue_type_template_id_522ba0a4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -40757,7 +41122,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_pages_Games__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/pages/Games */ "./src/components/pages/Games.vue");
 /* harmony import */ var _components_pages_Speedrun__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/pages/Speedrun */ "./src/components/pages/Speedrun.vue");
 /* harmony import */ var _components_pages_JoiasDoPassado__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/pages/JoiasDoPassado */ "./src/components/pages/JoiasDoPassado.vue");
-/* harmony import */ var _components_pages_FanGames__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/pages/FanGames */ "./src/components/pages/FanGames.vue");
+/* harmony import */ var _components_pages_JoiasListaJogos__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/pages/JoiasListaJogos */ "./src/components/pages/JoiasListaJogos.vue");
+/* harmony import */ var _components_pages_FanGames__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/pages/FanGames */ "./src/components/pages/FanGames.vue");
 
 
 
@@ -40774,6 +41140,7 @@ try {
 }
 
 __webpack_require__(/*! @fortawesome/fontawesome-free */ "./node_modules/@fortawesome/fontawesome-free/js/fontawesome.js");
+
 
 
 
@@ -40810,8 +41177,11 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_7__["default"]({
     path: '/joias',
     component: _components_pages_JoiasDoPassado__WEBPACK_IMPORTED_MODULE_12__["default"]
   }, {
+    path: '/joias/lista',
+    component: _components_pages_JoiasListaJogos__WEBPACK_IMPORTED_MODULE_13__["default"]
+  }, {
     path: '/fangames',
-    component: _components_pages_FanGames__WEBPACK_IMPORTED_MODULE_13__["default"]
+    component: _components_pages_FanGames__WEBPACK_IMPORTED_MODULE_14__["default"]
   }]
 }); //Vue app
 

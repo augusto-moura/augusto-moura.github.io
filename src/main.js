@@ -14,6 +14,7 @@ import SoftwareDevelopment from './components/pages/SoftwareDevelopment'
 import Games from './components/pages/Games'
 import Speedrun from './components/pages/Speedrun'
 import JoiasDoPassado from './components/pages/JoiasDoPassado'
+import JoiasListaJogos from './components/pages/JoiasListaJogos'
 import FanGames from './components/pages/FanGames'
 
 Vue.config.productionTip = false
@@ -31,6 +32,7 @@ const router = new VueRouter({
 		{ path: '/games', component: Games },
 		{ path: '/speedrun', component: Speedrun },		
 		{ path: '/joias', component: JoiasDoPassado },		
+		{ path: '/joias/lista', component: JoiasListaJogos },		
 		{ path: '/fangames', component: FanGames },
 	]
 })

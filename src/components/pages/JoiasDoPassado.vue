@@ -1,19 +1,47 @@
 <template>
 	<div>
-		<button 
-			:class="'btn ' + (order == 'DESC' ? 'btn-primary' : 'btn-outline-primary')" 
-			@click="changeOrder('DESC')"
-		>
-			<i class="fas fa-sort-numeric-down-alt fa-fw"></i>
-			Recentes primeiro
-		</button>
-		<button 
-			:class="'btn ' + (order == 'ASC' ? 'btn-primary' : 'btn-outline-primary')" 
-			@click="changeOrder('ASC')"
-		>
-			<i class="fas fa-sort-numeric-down fa-fw"></i>
-			Antigos primeiro
-		</button>
+		<div class="w-100 text-center">
+			<img 
+				src="https://augustobgm.files.wordpress.com/2020/01/joias-do-passado-fundo-escuro.png" 
+				class="mb-3 rounded"
+				style="width: 350px;"
+				alt="Jóias do passado"
+			/>
+		</div>
+
+		<p>
+			Sempre temos intenção de jogar mais do que conseguimos. No Jóias do Passado, jogaremos algumas pérolas (gemas?) dos jogos antigos que deixei passar, desde o Nintendinho até algumas gerações atrás, como o Wii.
+		</p>
+		<p>
+			Algum jogo que você adora não consta na lista de jogos? Veja se eu já não joguei e envie uma mensagem privada para mim no Discord em AugustoTitan#8263 !
+		</p>
+
+		<h3 class="text-center">
+			<router-link to="/joias/lista" class="text-primary">
+				<u>Lista de jogos (clique para abrir)</u>
+			</router-link>
+		</h3>
+
+		<hr>
+
+		<h3 class="text-primary">Análises</h3>
+
+		<div class="btn-group" role="group" aria-label="Alterar ordem de exibição">
+			<button 
+				:class="'btn ' + (order == 'DESC' ? 'btn-primary' : 'btn-outline-primary')" 
+				@click="changeOrder('DESC')"
+			>
+				<i class="fas fa-sort-numeric-down-alt fa-fw"></i>
+				Recentes primeiro
+			</button>
+			<button 
+				:class="'btn ' + (order == 'ASC' ? 'btn-primary' : 'btn-outline-primary')" 
+				@click="changeOrder('ASC')"
+			>
+				<i class="fas fa-sort-numeric-down fa-fw"></i>
+				Antigos primeiro
+			</button>
+		</div>
 
 		<div
 			v-if="jewels"
@@ -21,9 +49,21 @@
 			<div 
 				v-for="jewel in jewels"
 				:key="jewel.ID"
-				class="card"
+				:class="'card p-3 my-2 ' + ('joia-atual' in jewel.tags ? 'joia-atual' : '')"
 			>
-				{{ jewel.title }}
+				<div class="row">
+					<div class="col-sm-4 text-center">
+						<img 
+							v-if="jewel.featured_image != ''"
+							:src="jewel.featured_image"
+							class="game-cover mb-3 mb-sm-0"
+						/>
+					</div>
+					<div class="col-sm-8">
+						<h4 class="font-weight-bold">{{ jewel.title }}</h4>
+						<div v-html="jewel.content"></div>						
+					</div>				
+				</div>
 			</div>
 		</div>
 	</div>
@@ -62,6 +102,39 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+	.game-cover {
+		max-height: 140px;
+	}
 
+	/* https://www.gradient-animator.com */
+	.joia-atual {
+		background: linear-gradient(270deg, #cc6f73, #f8f9fa);
+		background-size: 400% 400%;
+		-webkit-animation: JoiaAtual 2s ease infinite;
+		-moz-animation: JoiaAtual 2s ease infinite;
+		-o-animation: JoiaAtual 2s ease infinite;
+		animation: JoiaAtual 2s ease infinite;
+	}	
+
+	@-webkit-keyframes JoiaAtual {
+		0%{background-position:0% 50%}
+		50%{background-position:100% 50%}
+		100%{background-position:0% 50%}
+	}
+	@-moz-keyframes JoiaAtual {
+		0%{background-position:0% 50%}
+		50%{background-position:100% 50%}
+		100%{background-position:0% 50%}
+	}
+	@-o-keyframes JoiaAtual {
+		0%{background-position:0% 50%}
+		50%{background-position:100% 50%}
+		100%{background-position:0% 50%}
+	}
+	@keyframes JoiaAtual {
+		0%{background-position:0% 50%}
+		50%{background-position:100% 50%}
+		100%{background-position:0% 50%}
+	}
 </style>
