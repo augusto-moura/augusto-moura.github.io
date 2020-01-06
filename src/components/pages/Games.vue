@@ -12,7 +12,7 @@
 
 		<hr>
 		
-		<a href="http://backloggery.com/88titan88" target="_blank" class="link-with-card">
+		<a href="https://backloggery.com/88titan88" target="_blank" class="link-with-card">
 			<div class="card mb-2 border-primary clickable-card">
 				<div class="card-body">
 					<h5 class="card-title">
@@ -23,7 +23,7 @@
 						Eu mantenho um registro constantemente atualizado de jogos que já joguei, zerei ou completei. Confira!
 					</p>
 					<div class="w-100 text-center">
-						<img src="http://backloggery.com/88titan88/sig.gif" alt="">
+						<img src="https://backloggery.com/88titan88/sig.gif" alt="">
 					</div>
 				</div>
 			</div>

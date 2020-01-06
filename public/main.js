@@ -2837,7 +2837,7 @@ __webpack_require__.r(__webpack_exports__);
     searchJewels: function searchJewels() {
       var _this = this;
 
-      fetch("http://public-api.wordpress.com/rest/v1.1/sites/augustobgm.wordpress.com/posts/?category=J%C3%B3ias%20do%20passado&order_by=title&order=".concat(this.order, "&fields=ID,title,date,content,slug,featured_image,tags"), {
+      fetch("https://public-api.wordpress.com/rest/v1.1/sites/augustobgm.wordpress.com/posts/?category=J%C3%B3ias%20do%20passado&order_by=title&order=".concat(this.order, "&fields=ID,title,date,content,slug,featured_image,tags"), {
         headers: new Headers({
           'User-agent': 'Mozilla/4.0 Custom User Agent'
         })
@@ -24845,7 +24845,7 @@ var staticRenderFns = [
       "a",
       {
         staticClass: "link-with-card",
-        attrs: { href: "http://backloggery.com/88titan88", target: "_blank" }
+        attrs: { href: "https://backloggery.com/88titan88", target: "_blank" }
       },
       [
         _c("div", { staticClass: "card mb-2 border-primary clickable-card" }, [
@@ -24864,7 +24864,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "w-100 text-center" }, [
               _c("img", {
                 attrs: {
-                  src: "http://backloggery.com/88titan88/sig.gif",
+                  src: "https://backloggery.com/88titan88/sig.gif",
                   alt: ""
                 }
               })
