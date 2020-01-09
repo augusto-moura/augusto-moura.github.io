@@ -2619,6 +2619,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'app',
   data: function data() {
@@ -2947,6 +2951,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string */ "./node_modules/core-js/modules/es.object.to-string.js");
 /* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_0__);
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -10374,7 +10388,7 @@ for (var COLLECTION_NAME in DOMIterables) {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n.main-content,\n.navbar .navbar-text,\nfooter {\n\tfont-family: Roboto, sans-serif;\n}\n.avatar-circular {\n\tvertical-align: middle;\n\twidth: 90px;\n\tborder-radius: 50%;\n}\n.router-link-exact-active {\n\tfont-weight: bold;\n\tcolor: black;\n}\n.navbar .navbar-text:not(.router-link-exact-active) {\n\tcolor: #cc6f73;\n}\n.nav-link {\n\ttext-transform: uppercase;\n\tletter-spacing: 1.25px;\n}\n@media (max-width: 575.8px) {\n.name-and-bio {\n\t\twidth: 210px;\n\t\tmargin-left: 5px;\n}\n}\n@media (max-width: 400px) {\n.navbar-toggler {\n\t\twidth: 100%;\n\t\tmargin-top: 10px;\n\t\tmargin-bottom: 8px;\n}\n}\n\n", ""]);
+exports.push([module.i, "\n.main-content,\n.navbar .navbar-text,\nfooter {\n\tfont-family: Roboto, sans-serif;\n}\n.avatar-circular {\n\tvertical-align: middle;\n\twidth: 90px;\n\tborder-radius: 50%;\n}\n.navbar-nav .router-link-exact-active {\n\tfont-weight: bold;\n\tcolor: black;\n}\n.navbar .navbar-text:not(.router-link-exact-active) {\n\tcolor: #cc6f73;\n}\n.nav-link {\n\ttext-transform: uppercase;\n\tletter-spacing: 1.25px;\n}\n@media (max-width: 575.8px) {\n.name-and-bio {\n\t\twidth: 210px;\n\t\tmargin-left: 5px;\n}\n}\n@media (max-width: 400px) {\n.navbar-toggler {\n\t\twidth: 100%;\n\t\tmargin-top: 10px;\n\t\tmargin-bottom: 8px;\n}\n}\n\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -24975,17 +24989,31 @@ var render = function() {
       "nav",
       { staticClass: "navbar navbar-expand-lg navbar-light bg-light" },
       [
-        _c("img", {
-          staticClass: "avatar-circular d-flex justify-content-md-center",
-          attrs: {
-            src:
-              "https://augustobgm.files.wordpress.com/2020/01/avatar-facebook-e1578195578588.png"
-          }
-        }),
+        _c("router-link", { attrs: { to: "/" } }, [
+          _c("img", {
+            staticClass: "avatar-circular d-flex justify-content-md-center",
+            attrs: {
+              src:
+                "https://augustobgm.files.wordpress.com/2020/01/avatar-facebook-e1578195578588.png"
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("router-link", { attrs: { to: "/" } }, [
+          _c("div", { staticClass: "d-inline-block name-and-bio" }, [
+            _c("h1", { staticClass: "ml-lg-3 pb-0 mb-0 navbar-text d-block" }, [
+              _vm._v("\n\t\t\t\t\t\tAugusto Moura\n\t\t\t\t\t")
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "ml-lg-3 navbar-text d-block" }, [
+              _vm._v(
+                "\n\t\t\t\t\t\tDesenvolvedor full-stack e viciado em videogames\n\t\t\t\t\t"
+              )
+            ])
+          ])
+        ]),
         _vm._v(" "),
         _vm._m(0),
-        _vm._v(" "),
-        _vm._m(1),
         _vm._v(" "),
         _c(
           "div",
@@ -25025,7 +25053,8 @@ var render = function() {
             )
           ]
         )
-      ]
+      ],
+      1
     ),
     _vm._v(" "),
     _c("div", { staticClass: "container-fluid" }, [
@@ -25039,26 +25068,10 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _vm._m(2)
+    _vm._m(1)
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-inline-block name-and-bio" }, [
-      _c("h1", { staticClass: "ml-lg-3 pb-0 mb-0 navbar-text d-block" }, [
-        _vm._v("\n\t\t\t\tAugusto Moura\n\t\t\t")
-      ]),
-      _vm._v(" "),
-      _c("span", { staticClass: "ml-lg-3 navbar-text d-block" }, [
-        _vm._v(
-          "\n\t\t\t\tDesenvolvedor full-stack e viciado em videogames\n\t\t\t"
-        )
-      ])
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -25578,11 +25591,22 @@ var render = function() {
     [
       _c("router-link", { attrs: { to: "/joias" } }, [
         _c("i", { staticClass: "fas fa-chevron-left fa-fw" }),
-        _vm._v("\n\t\tVoltar para Jóias do Passado\n\t")
+        _vm._v("\n\t\tVoltar para Jóias do Passado\n\t\t"),
+        _c("div", { staticClass: "d-block text-center" }, [
+          _c("img", {
+            staticClass: "mb-3 rounded",
+            staticStyle: { width: "350px" },
+            attrs: {
+              src:
+                "https://augustobgm.files.wordpress.com/2020/01/joias-do-passado-fundo-escuro.png",
+              alt: "Jóias do passado"
+            }
+          })
+        ])
       ]),
       _vm._v(" "),
       _c("h1", { staticClass: "my-3 text-primary" }, [
-        _vm._v("\n\t\tJóias do Passado - Lista de jogos\n\t")
+        _vm._v("\n\t\tLista de jogos\n\t")
       ]),
       _vm._v(" "),
       _vm.jewelsListPage

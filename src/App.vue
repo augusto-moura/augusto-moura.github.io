@@ -1,19 +1,23 @@
 <template>
 	<div id="app">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<img
-				src="https://augustobgm.files.wordpress.com/2020/01/avatar-facebook-e1578195578588.png" 
-				class="avatar-circular d-flex justify-content-md-center"
-			/>
+			<router-link to="/">
+				<img
+					src="https://augustobgm.files.wordpress.com/2020/01/avatar-facebook-e1578195578588.png" 
+					class="avatar-circular d-flex justify-content-md-center"
+				/>
+			</router-link>
 
-			<div class="d-inline-block name-and-bio">
-				<h1 class="ml-lg-3 pb-0 mb-0 navbar-text d-block">
-					Augusto Moura
-				</h1>
-				<span class="ml-lg-3 navbar-text d-block">
-					Desenvolvedor full-stack e viciado em videogames
-				</span>				
-			</div>
+			<router-link to="/">
+				<div class="d-inline-block name-and-bio">
+						<h1 class="ml-lg-3 pb-0 mb-0 navbar-text d-block">
+							Augusto Moura
+						</h1>
+						<span class="ml-lg-3 navbar-text d-block">
+							Desenvolvedor full-stack e viciado em videogames
+						</span>
+				</div>
+			</router-link>
 
 			<button class="navbar-toggler ml-sm-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -85,7 +89,7 @@ export default {
 		border-radius: 50%;
 	}
 
-	.router-link-exact-active {
+	.navbar-nav .router-link-exact-active {
 		font-weight: bold;
 		color: black;
 	}
