@@ -72,6 +72,10 @@ export default {
 </script>
 
 <style scoped>
+	p {
+		text-align: justify;
+	}
+
 	a.link-with-card, 
 	a.link-with-card:hover{
 		color: inherit;

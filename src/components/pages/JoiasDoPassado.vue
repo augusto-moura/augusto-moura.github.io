@@ -103,6 +103,10 @@ export default {
 </script>
 
 <style scoped>
+	p {
+		text-align: justify;
+	}
+
 	.game-cover {
 		max-height: 140px;
 	}

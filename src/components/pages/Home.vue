@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<p>
+		<p class="text-justify">
 			Bem-vindo ao meu website! Aqui você encontra informações sobre minha carreira profissional e conhecimento como programador, e na área dos videogames, minhas análises, challenge runs e jogos favoritos.
 		</p>
 

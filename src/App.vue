@@ -72,15 +72,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 	.main-content,
 	.navbar .navbar-text,
 	footer {
 		font-family: Roboto, sans-serif;
-	}
-
-	.main-content {
-		text-align: justify;
 	}
 
 	.avatar-circular {
