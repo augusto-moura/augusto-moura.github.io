@@ -13,8 +13,6 @@
 			</div>
 		</router-link>
 
-
-
 		<h1 class="my-3 text-primary">
 			Lista de jogos
 		</h1>
@@ -24,6 +22,10 @@
 			v-html="jewelsListPage.content"
 		>
 
+		</div>
+		<div v-else>
+			<!-- TODO: content-loader -->
+			Carregando...
 		</div>
 	</div>
 </template>
