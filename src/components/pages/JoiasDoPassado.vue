@@ -1,5 +1,10 @@
 <template>
 	<div>
+		<router-link to="/games">
+			<i class="fas fa-chevron-left fa-fw"></i>
+			Voltar para Jogos
+		</router-link>
+		
 		<div class="w-100 text-center">
 			<img 
 				src="https://augustobgm.files.wordpress.com/2020/01/joias-do-passado-fundo-escuro.png" 

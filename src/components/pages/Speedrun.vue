@@ -1,6 +1,11 @@
 <template>
 	<div>
-		<h1 class="text-primary">Speedrun</h1>
+		<router-link to="/games">
+			<i class="fas fa-chevron-left fa-fw"></i>
+			Voltar para Jogos
+		</router-link>
+
+		<h1 class="my-3 text-primary">Speedrun</h1>
 
 		<p>
 			Em videogames, speedrun significa completar um objetivo dentro de um jogo no menor tempo possível. É um desafio que adiciona profundidade e dificuldade aos jogos quando comparados a playthroughs casuais, e bons resultados dependem de muita dedicação e habilidade.

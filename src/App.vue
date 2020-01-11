@@ -14,7 +14,7 @@
 							Augusto Moura
 						</h1>
 						<span class="ml-lg-3 navbar-text d-block">
-							Desenvolvedor full-stack e viciado em videogames
+							Desenvolvedor PHP+Vue.js e viciado em videogames
 						</span>
 				</div>
 			</router-link>
@@ -43,13 +43,24 @@
 		<div class="container-fluid">
 			<div class="row justify-content-center">
 				<div class="main-content col-md-8 pt-4">
-					<router-view></router-view>
+					<transition-page>
+						<router-view />
+					</transition-page>
 				</div>
 			</div>
 		</div>
 		<footer class="text-muted bg-light mt-2">
 			<div class="container p-4">
-				<p class="mb-0">© 2020 Augusto Beraldi Guedes de Moura</p>
+				<p class="mb-0">
+					© 2020 Augusto Beraldi Guedes de Moura<br />
+					<a 
+						href="https://github.com/augusto-moura/augusto-moura.github.io"
+						class="text-muted"
+					>
+						<i class="fab fa-github fa-fw"></i>
+						Código-fonte deste site
+					</a>
+				</p>
 			</div>
 		</footer>
 	</div>

@@ -34,7 +34,14 @@ const router = new VueRouter({
 		{ path: '/joias', component: JoiasDoPassado },		
 		{ path: '/joias/lista', component: JoiasListaJogos },		
 		{ path: '/fangames', component: FanGames },
-	]
+	],
+	scrollBehavior (to, from, savedPosition) {
+		if (savedPosition) {
+			return savedPosition
+		} else {
+			return { x: 0, y: 0 }
+		}
+	}
 })
 
 //Vue app
