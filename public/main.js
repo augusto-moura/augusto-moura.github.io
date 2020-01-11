@@ -3252,13 +3252,73 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_0__);
+
 //
 //
 //
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  computed: {
+    totalPbs: function totalPbs() {
+      return this.pbs.length;
+    }
+  },
+  data: function data() {
+    return {
+      pbs: null
+    };
+  },
+  methods: {
+    searchPbs: function searchPbs() {
+      var _this = this;
+
+      fetch("https://www.speedrun.com/api/v1/users/18vnevjl/personal-bests?embed=game,category", {
+        headers: new Headers({
+          'User-agent': 'Mozilla/4.0 Custom User Agent'
+        })
+      }).then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        _this.pbs = data.data;
+      });
+    },
+    searchMMLBPbs: function searchMMLBPbs() {
+      fetch("https://megamanleaderboards.net/index.php?page=runner&name=Titanish", {
+        headers: new Headers({
+          'User-agent': 'Mozilla/4.0 Custom User Agent'
+        })
+      }).then(function (response) {
+        console.log(response);
+        return response.text();
+      }).then(function (data) {
+        console.log(data);
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.searchPbs();
+    this.searchMMLBPbs();
+  }
+});
 
 /***/ }),
 
@@ -26155,7 +26215,29 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n\tSpeedrun\n")])
+  return _c("div", [
+    _c("p", [_vm._v("\n\t\tEm construção.\n\t")]),
+    _vm._v(" "),
+    _vm.pbs
+      ? _c(
+          "div",
+          _vm._l(_vm.pbs, function(pb) {
+            return _c("div", { key: pb.run.id }, [
+              _vm._v(
+                "\n\t\t\t" +
+                  _vm._s(pb.game.data.names.international) +
+                  "\n\t\t\t-\n\t\t\t" +
+                  _vm._s(pb.category.data.name) +
+                  "\n\t\t\t-\n\t\t\t" +
+                  _vm._s(pb.run.times.primary) +
+                  "\n\t\t"
+              )
+            ])
+          }),
+          0
+        )
+      : _vm._e()
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
