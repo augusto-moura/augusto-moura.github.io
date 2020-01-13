@@ -120,30 +120,9 @@ export default {
 	.joia-atual {
 		background: linear-gradient(270deg, #cc6f73, #f8f9fa);
 		background-size: 400% 400%;
-		-webkit-animation: JoiaAtual 2s ease infinite;
-		-moz-animation: JoiaAtual 2s ease infinite;
-		-o-animation: JoiaAtual 2s ease infinite;
-		animation: JoiaAtual 2s ease infinite;
-	}	
-
-	@-webkit-keyframes JoiaAtual {
-		0%{background-position:0% 50%}
-		50%{background-position:100% 50%}
-		100%{background-position:0% 50%}
-	}
-	@-moz-keyframes JoiaAtual {
-		0%{background-position:0% 50%}
-		50%{background-position:100% 50%}
-		100%{background-position:0% 50%}
-	}
-	@-o-keyframes JoiaAtual {
-		0%{background-position:0% 50%}
-		50%{background-position:100% 50%}
-		100%{background-position:0% 50%}
-	}
-	@keyframes JoiaAtual {
-		0%{background-position:0% 50%}
-		50%{background-position:100% 50%}
-		100%{background-position:0% 50%}
+		-webkit-animation: GradientAnimation 2s ease infinite;
+		-moz-animation: GradientAnimation 2s ease infinite;
+		-o-animation: GradientAnimation 2s ease infinite;
+		animation: GradientAnimation 2s ease infinite;
 	}
 </style>

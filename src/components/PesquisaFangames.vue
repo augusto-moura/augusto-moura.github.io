@@ -6,7 +6,7 @@
 			<div 
 				v-for="fangame in fangames"
 				:key="fangame.ID"
-				class="fangame card p-3 my-2"
+				:class="'fangame card p-3 my-2 ' + (fangame.isEmDesenvolvimento ? 'em-desenvolvimento' : '')"
 			>
 				<div class="row">
 					<div class="col-12">
@@ -15,7 +15,7 @@
 							<a
 								v-for="tag in fangame.tags"
 								href=""
-								class="badge badge-secondary mr-2"
+								:class="'badge mr-2 ' + (tag.slug == 'em-desenvolvimento' ? 'badge-warning' : 'badge-secondary')"
 								:key="tag.ID"
 							>
 								{{ tag.description }}
@@ -60,6 +60,7 @@ export default {
 						`);
 					$('a', $el).attr('target', '_blank');
 					fangame.content = $el.html();
+					fangame.isEmDesenvolvimento = 'Em desenvolvimento' in fangame.tags;
 					return fangame;
 				});
 				this.foundFangames = data.found;
@@ -73,5 +74,14 @@ export default {
 </script>
 
 <style scoped>
+	/* https://www.gradient-animator.com */
+	.fangame.em-desenvolvimento {
+		background: linear-gradient(270deg, #ffffe7, #fffec1);
+		background-size: 400% 400%;
+		-webkit-animation: GradientAnimation 2s ease infinite;
+		-moz-animation: GradientAnimation 2s ease infinite;
+		-o-animation: GradientAnimation 2s ease infinite;
+		animation: GradientAnimation 2s ease infinite;
+	}
 	
 </style>
