@@ -18,7 +18,7 @@
 			<!-- TODO: content-loader -->
 			Carregando...
 		</div>
-
+		
 		<pesquisa-fangames></pesquisa-fangames>
 	</div>
 </template>
