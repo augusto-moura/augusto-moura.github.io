@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar navbar-expand-lg navbar-light bg-header-footer">
 			<router-link to="/">
 				<img
 					src="https://augustobgm.files.wordpress.com/2020/01/avatar-facebook-e1578195578588.png" 
@@ -26,7 +26,7 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
 					<li
-						v-for="menuItem in menuItems()"
+						v-for="menuItem in menu"
 						:key="menuItem.id"
 					>
 						<router-link
@@ -49,7 +49,7 @@
 				</div>
 			</div>
 		</div>
-		<footer class="text-muted bg-light mt-2">
+		<footer class="text-muted bg-header-footer mt-2">
 			<div class="container p-4">
 				<p class="mb-0">
 					© 2020 Augusto Beraldi Guedes de Moura<br />
@@ -78,18 +78,13 @@ export default {
 				{ id: 3, title: "Jogos", path: '/games', icon: 'fas fa-gamepad' }
 			]
 		};
-	},
-	methods: {
-		menuItems() {
-			return this.menu;
-		}
 	}
 }
 </script>
 
 <style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
 
-<style>
+<style lang="scss">
 	.main-content,
 	.navbar .navbar-text,
 	footer {
@@ -100,15 +95,16 @@ export default {
 		vertical-align: middle;
 		width: 90px;
 		border-radius: 50%;
+		border: 2px solid $header-footer-text-color;
 	}
 
 	.navbar-nav .router-link-exact-active {
 		font-weight: bold;
-		color: black;
+		color: $active-menu-link-color;
 	}
 
 	.navbar .navbar-text:not(.router-link-exact-active) {
-		color: #cc6f73;
+		color: $header-footer-text-color;
 	}
 
 	.nav-link {

@@ -71,7 +71,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	p {
 		text-align: justify;
 	}
@@ -87,7 +87,7 @@ export default {
 	}
 
 	.clickable-card:hover {
-		background-color: #cc6f73;
+		background-color: $primary-color;
 		color: white;
 	}
 </style>

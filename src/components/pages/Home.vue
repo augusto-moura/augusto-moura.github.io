@@ -20,8 +20,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 	.illustration-credit a {
-		color: #cacaca;
+		color: $obscured-text-color;
 	}
 </style>

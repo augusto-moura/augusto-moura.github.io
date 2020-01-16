@@ -1,0 +1,32 @@
+/* $primary-color: #cc6f73;
+$background-color: #ffffff;
+$obscured-text-color: #cacaca;
+$active-menu-link-color: black;
+$header-footer-color: #f8f9fa;
+$header-footer-text-color: #cc6f73;
+
+//Bootstrap
+$body-bg: #ffffff;
+$body-color: #212529;
+
+$theme-colors: (
+	"primary": $primary-color,
+	"header-footer": $header-footer-color
+);
+ */
+
+$primary-color: #af4f54;
+$background-color: #ffffff;
+$obscured-text-color: #cacaca;
+$active-menu-link-color: black;
+$header-footer-color: #e6dbdb ;
+$header-footer-text-color: #af4f54;
+
+//Bootstrap
+$body-bg: #f8f9fa;
+$body-color: #000000;
+
+$theme-colors: (
+	"primary": $primary-color,
+	"header-footer": $header-footer-color
+);

@@ -14,7 +14,7 @@ import SoftwareDevelopment from './components/pages/SoftwareDevelopment'
 import Games from './components/pages/Games'
 import Speedrun from './components/pages/Speedrun'
 import JoiasDoPassado from './components/pages/JoiasDoPassado'
-import JoiasListaJogos from './components/pages/JoiasListaJogos'
+import JoiasListaJogos from './components/JoiasListaJogos'
 import FanGames from './components/pages/FanGames'
 
 Vue.config.productionTip = false

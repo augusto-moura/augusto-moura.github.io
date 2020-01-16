@@ -5,7 +5,7 @@
 		</h2>
 
 		<p>
-			Meu primeiro contato com programaçõ foi quando, ainda criança, explorava as possibilidades de criação no RPG Maker 2000. Mais tarde, na disciplina de Computação Científica do curso de Engenharia Elétrica, percebi que tinha afinidade com desenvolvimento de software.
+			Meu primeiro contato com programação foi quando, ainda criança, explorava as possibilidades de criação no RPG Maker 2000. Mais tarde, na disciplina de Computação Científica do curso de Engenharia Elétrica, percebi que tinha afinidade com desenvolvimento de software.
 		</p>
 		<p>
 			Trabalho como desenvolvedor full-stack em uma autarquia federal há 3 anos, e minha paixão por programação continua a crescer! Tento sempre procurar por boas ferramentas para resolver meus problemas, e evito me apegar demais a qualquer tecnologia.
@@ -94,7 +94,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 	p {
 		text-align: justify;
 	}
