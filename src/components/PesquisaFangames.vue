@@ -18,29 +18,12 @@
 		<div
 			v-if="filteredFangames"
 		>
-			<div 
+			<fan-game 
 				v-for="fangame in filteredFangames"
 				:key="fangame.ID"
-				:class="'fangame card p-3 my-2 ' + (fangame.isEmDesenvolvimento ? 'em-desenvolvimento' : '')"
-			>
-				<div class="row">
-					<div class="col-12">
-						<h4 class="font-weight-bold mb-0" v-html="fangame.title"></h4>
-						<div class="mb-2">
-							<a
-								v-for="tag in fangame.tags"
-								href=""
-								:class="'badge mr-2 ' + (tag.slug == 'em-desenvolvimento' ? 'badge-warning' : 'badge-secondary')"
-								:key="tag.ID"
-								@click.prevent="applyTag(tag.description)"
-							>
-								{{ tag.description }}
-							</a>
-						</div>
-						<div v-html="fangame.content"></div>						
-					</div>				
-				</div>
-			</div>
+				:fangame="fangame"
+				@tagClick="applyTag($event)"
+			/>
 		</div>
 	</div>
 </template>
@@ -88,23 +71,7 @@ export default {
 			})
 			.then(response => response.json())
 			.then(data => {
-				this.fangames = data.posts.map(fangame => {
-					//Adicionar collapse nos detalhes e _blank aos links
-					let $el = $('<div></div>');
-					$el.html(fangame.content);
-					$('.detalhes', $el)
-						.addClass('collapse')
-						.attr('id', `collapse-fangame-${fangame.ID}`)
-						.before(`
-							<button class="btn btn-sm btn-primary mb-2" type="button" data-toggle="collapse" data-target="#collapse-fangame-${fangame.ID}" aria-expanded="false" aria-controls="collapse-fangame-${fangame.ID}">
-          						Detalhes
-        					</button> 
-						`);
-					$('a', $el).attr('target', '_blank');
-					fangame.content = $el.html();
-					fangame.isEmDesenvolvimento = 'Em desenvolvimento' in fangame.tags;
-					return fangame;
-				});
+				this.fangames = data.posts;
 				this.foundFangames = data.found;
 			});
 		},
@@ -124,15 +91,5 @@ export default {
 }
 </script>
 
-<style scoped>
-	/* https://www.gradient-animator.com */
-	.fangame.em-desenvolvimento {
-		background: linear-gradient(270deg, #ffffe7, #fffec1);
-		background-size: 400% 400%;
-		-webkit-animation: GradientAnimation 2s ease infinite;
-		-moz-animation: GradientAnimation 2s ease infinite;
-		-o-animation: GradientAnimation 2s ease infinite;
-		animation: GradientAnimation 2s ease infinite;
-	}
-	
+<style>	
 </style>

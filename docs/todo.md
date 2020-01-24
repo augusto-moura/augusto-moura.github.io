@@ -1,4 +1,5 @@
 # TO DO
+
 * Nova página: Filmes e séries  
 A partir da API do trakt, exibir histórico recente, filmes e séries assistidas e/ou watchlist.
 
@@ -20,4 +21,4 @@ A partir da API do trakt, exibir histórico recente, filmes e séries assistidas
 
 * Desenvolvimento web: adicionar linguagem Java.
 
-* Desenvolvimento web: adicionar, em cada linguagem, o que já construí usando ela.
+* Desenvolvimento web: adicionar, em cada linguagem, o que já construí usando ela, links para recursos, cursos recomendados. Enriquecer componente TecnologiaQueJaTrabalhei para conter todas as informações.

@@ -18,7 +18,7 @@
 			Sempre temos intenção de jogar mais do que conseguimos. No Jóias do Passado, jogaremos algumas pérolas (gemas?) dos jogos antigos que deixei passar, desde o Nintendinho até algumas gerações atrás, como o Wii.
 		</p>
 		<p>
-			Algum jogo que você adora não consta na lista de jogos? Veja se eu já não joguei e envie uma mensagem privada para mim no Discord em AugustoTitan#8263 !
+			Algum jogo que você adora não consta na lista de jogos? <a href="https://backloggery.com/88titan88" target="_blank">Veja se eu já não joguei no meu backlog</a> e envie uma mensagem privada para mim no Discord em AugustoTitan#8263 !
 		</p>
 
 		<h3 class="text-center">

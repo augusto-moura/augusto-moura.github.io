@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<p>
-			Meu hobby favorito é o de videogames! Meu gosto é bem amplo, mas tendo a preferir jogos retro ou estilo retro. 
+			Meu hobby favorito é o de videogames! Amante de jogos antigos (NES até GameCube), hoje em dia meu gosto combina mais com os indies.
 		</p>
 		<p>Meus apelidos em comunidades relacionadas a jogos são:</p>
 		<ul>

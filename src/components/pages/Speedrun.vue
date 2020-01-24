@@ -98,7 +98,7 @@ export default {
 	},
 	methods: {
 		searchSrcomPbs(){
-			fetch(`https://www.speedrun.com/api/v1/users/18vnevjl/personal-bests?embed=game,category`, {
+			fetch(`https://www.speedrun.com/api/v1/users/18vnevjl/personal-bests?embed=game,category,variables`, {
 				headers: new Headers({
 					'User-agent': 'Mozilla/4.0 Custom User Agent'
 				})
