@@ -17,7 +17,7 @@ A partir da API do trakt, exibir histórico recente, filmes e séries assistidas
 
 * Jogos: formatar melhor os cards com sub-áreas de jogos. Ex.: adicionar imagens para cada card.
 
-* Fan games: adicionar imagem de destaque para cada post e exibir na lateral do card.
+* Fan games: fazer imagens dentro de "detalhes" carregarem apenas ao expandir.
 
 * Desenvolvimento web: adicionar linguagem Java.
 

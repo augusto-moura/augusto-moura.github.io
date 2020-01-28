@@ -23,7 +23,28 @@
 						{{ tag.description }}
 					</a>
 				</div>
-				<div v-html="htmlCorrigido"></div>						
+				<div 
+					class="mainContent" 
+					v-html="mainContent">
+				</div>
+				<button 
+					v-if="collapseHtml"
+					class="btn btn-sm btn-primary mb-2" 
+					type="button"
+					@click="handleCollapse()"
+				>
+					Detalhes
+				</button> 
+				<div v-if="collapseHtml"
+					ref="collapse"
+					:id="`collapse-fangame-${fangame.ID}`" 
+					class="collapse"
+				>
+					<div 
+						v-if="collapseShown"
+						v-html="collapseHtml"
+					></div>
+				</div>
 			</div>				
 		</div>
 	</div>
@@ -31,6 +52,13 @@
 
 <script>
 export default {
+	data: function(){
+		return {
+			collapseShown: false,
+			collapseHtml: "",
+			mainContent: "",
+		}
+	},
 	props: {
 		fangame: {
 			required: true,
@@ -43,23 +71,27 @@ export default {
 		},
 		isEmDesenvolvimento: function(){
 			return 'Em desenvolvimento' in this.fangame.tags;
-		},
-		htmlCorrigido: function(){
-			let fangame = this.fangame;
+		}
+	},
+	mounted: function(){
+		let fangame = this.fangame;
 
-			//Adicionar collapse nos detalhes e _blank aos links
-			let $el = $('<div></div>');
-			$el.html(fangame.content);
-			$('.detalhes', $el)
-				.addClass('collapse')
-				.attr('id', `collapse-fangame-${fangame.ID}`)
-				.before(`
-					<button class="btn btn-sm btn-primary mb-2" type="button" data-toggle="collapse" data-target="#collapse-fangame-${fangame.ID}" aria-expanded="false" aria-controls="collapse-fangame-${fangame.ID}">
-						Detalhes
-					</button> 
-				`);
-			$('a', $el).attr('target', '_blank');
-			return $el.html();
+		//Adicionar collapse nos detalhes e _blank aos links
+		let $el = $('<div></div>');
+		$el.html(fangame.content.replace("<img", "<img-noload"));
+		$('a', $el).attr('target', '_blank');
+
+		let $detalhes = $('.detalhes', $el);
+		if($detalhes.length){
+			this.collapseHtml = $detalhes.first().html().replace("<img-noload", "<img");
+			$detalhes.remove();
+		}
+		this.mainContent = $el.html();
+	},
+	methods: {
+		handleCollapse(){
+			this.collapseShown = true;
+			this.$nextTick(() => $(this.$refs.collapse).collapse('toggle'));
 		}
 	}
 }
@@ -78,7 +110,7 @@ export default {
 
 	.featured-img {
 		height: 140px;
-		width: 140px;
+		width: auto;
 		object-fit: cover;
 	}
 </style>
