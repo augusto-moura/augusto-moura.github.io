@@ -66,7 +66,13 @@
 					</div>
 					<div class="col-sm-8">
 						<h4 class="font-weight-bold">{{ jewel.title }}</h4>
-						<div v-html="jewel.content"></div>						
+						<div v-if="'joia-atual' in jewel.tags">
+							<p>Jogando...</p>
+						</div>
+						<div 
+							v-else 
+							v-html="jewel.content"
+						/>
 					</div>				
 				</div>
 			</div>

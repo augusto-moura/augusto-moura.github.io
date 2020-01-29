@@ -48,24 +48,7 @@
 		</p>
 
 		<div v-if="pbs">
-			<div
-				v-for="(pbsArray, game) in pbs"
-				:key="game"
-			>
-				<h2>
-					{{ game }}
-				</h2>
-				<ul v-if="Array.isArray(pbsArray) && pbsArray.length > 0">
-					<li
-						v-for="pb in pbsArray"
-						:key="pb.id"
-					>
-						{{ pb.category }}
-						-
-						{{ pb.time }}
-					</li>
-				</ul>
-			</div>
+			<pb-list :pbs="pbs" :srcomLoaded="srcomLoaded" :mmlbLoaded="mmlbLoaded" />
 		</div>
 		<p v-else>
 			Carregando...
@@ -79,8 +62,8 @@ export default {
 	computed: {
 		pbs: function(){
 			return [
-				...( Array.isArray(this.srcomPBs) ? this.srcomPBs : [] ),
-				...( Array.isArray(this.mmlbPBs) ? this.mmlbPBs : [] ),
+				...( this.srcomLoaded ? this.srcomPBs : [] ),
+				...( this.mmlbLoaded ? this.mmlbPBs : [] ),
 			]
 			.sort((a, b) => (a.game > b.game) ? 1 : -1) //ordem alfabética
 			.reduce((acc, curr) => { //agrupar por nome de jogo
@@ -88,12 +71,23 @@ export default {
 				acc[curr.game].push(curr);
 				return acc;
 			},{});
+		},
+		srcomLoaded: function(){
+			return Array.isArray(this.srcomPBs);
+		},
+		mmlbLoaded: function(){
+			return Array.isArray(this.mmlbPBs);
 		}
 	},
 	data(){
 		return {
 			srcomPBs: null,
-			mmlbPBs: null
+			mmlbPBs: null,
+			mmlbCovers: {
+				'Mega Man X8': 'https://augustobgm.files.wordpress.com/2020/01/mega-man-x8.jpg',
+				'Mega Man X4': 'https://augustobgm.files.wordpress.com/2020/01/mega-man-x4.jpg',
+				'Mega Man Zero': 'https://augustobgm.files.wordpress.com/2020/01/mega-man-zero.jpg',
+			}
 		}
 	},
 	methods: {
@@ -115,7 +109,9 @@ export default {
 						id: pb.run.id,
 						game: pb.game.data.names.international,
 						category: pb.category.data.name,
-						time: this.formatDuration(duration(pb.run.times.primary))
+						time: this.formatDuration(duration(pb.run.times.primary)),
+						cover: pb.game.data.assets['cover-medium'].uri ?? 'https://augustobgm.files.wordpress.com/2020/01/square-image-not-found.png',
+						url: pb.run.weblink
 					}));	
 			});
 		},
@@ -132,14 +128,21 @@ export default {
 						id: pb.id,
 						game: pb.game.name,
 						category: pb.category,
-						time: this.formatDuration(duration(pb.converted_time * 10))
+						time: this.formatDuration(duration(pb.converted_time * 10)),
+						cover: this.getMMLBCoverSrc(pb.game.name),
+						url: pb.video
 					}));
 			});
 		},
 		formatDuration(duration) { 
 			return `${duration.hours()}h ${this.padWithZero(duration.minutes())}min ${this.padWithZero(duration.seconds())}s`
 		},
-		padWithZero: number => (number+'').padStart(2, '0')
+		padWithZero: number => (number+'').padStart(2, '0'),
+		getMMLBCoverSrc(gameName){
+			if(gameName in this.mmlbCovers)
+				return this.mmlbCovers[gameName];
+			return 'https://augustobgm.files.wordpress.com/2020/01/square-image-not-found.png';
+		},
 	},
 	mounted(){
 		this.searchSrcomPbs();
