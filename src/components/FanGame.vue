@@ -7,7 +7,7 @@
 				<img 
 					:src="image_src" 
 					alt="" 
-					class="featured-img mb-3 mb-sm-0"					
+					class="featured-img mb-3 mb-sm-0 rounded"					
 				/>
 			</div>
 			<div class="col-sm-7 col-xl-9">
@@ -78,12 +78,12 @@ export default {
 
 		//Adicionar collapse nos detalhes e _blank aos links
 		let $el = $('<div></div>');
-		$el.html(fangame.content.replace("<img", "<img-noload"));
+		$el.html(fangame.content.replace(/<img/g, "<img-noload"));
 		$('a', $el).attr('target', '_blank');
 
 		let $detalhes = $('.detalhes', $el);
 		if($detalhes.length){
-			this.collapseHtml = $detalhes.first().html().replace("<img-noload", "<img");
+			this.collapseHtml = $detalhes.first().html().replace(/<img-noload/g, "<img");
 			$detalhes.remove();
 		}
 		this.mainContent = $el.html();

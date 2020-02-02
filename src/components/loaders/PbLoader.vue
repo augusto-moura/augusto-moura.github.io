@@ -7,7 +7,7 @@
 		>
 			<div class="col-sm-4 text-center">
 				<content-loader				
-					:height="50"
+					:height="45"
 					:width="60"
 					:speed="2"				
 					primaryColor="#ecebeb"
@@ -24,6 +24,7 @@
 					:speed="2"				
 					primaryColor="#ecebeb"
 					secondaryColor="#c7c4c4"
+					style="max-height: 150px; max-width: 520px;"
 				>
 					<rect x="2" y="2" rx="3" ry="3" width="140" height="8" /> 
 					<rect x="11" y="12" rx="3" ry="3" width="131" height="8" />

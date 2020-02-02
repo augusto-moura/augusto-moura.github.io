@@ -1,8 +1,33 @@
 <template>
 	<div>
-		<p class="text-justify">
-			Bem-vindo ao meu website! Aqui você encontra informações sobre minha carreira profissional e conhecimento como programador, e na área dos videogames, minhas análises, challenge runs e jogos favoritos.
+		<p class="text-center">
+			Bem-vindo ao meu website!
 		</p>
+
+		<div class="row justify-content-center mb-3">
+			<div class="col-sm-6 col-lg-4">
+				<card-clicavel-com-imagem 
+					imagemSrc="https://augustobgm.files.wordpress.com/2020/02/desenvolvimento-card-img.png"
+					alt="Desenvolvimento de software"
+					rota="/development"
+				>
+					<p class="text-center">
+						Aqui você pode conhecer minha carreira profissional, meus conhecimentos e opiniões como desenvolvedor.
+					</p>
+				</card-clicavel-com-imagem>
+			</div>
+			<div class="col-sm-6 col-lg-4">
+				<card-clicavel-com-imagem 
+					imagemSrc="https://augustobgm.files.wordpress.com/2020/02/jogos-card-img.png"
+					alt="Jogos"
+					rota="/games"
+				>
+					<p class="text-center">
+						Confira o registro de todos os jogos que já joguei, Jóias do Passado, speedruns e fan games favoritos!
+					</p>
+				</card-clicavel-com-imagem>
+			</div>
+		</div>		
 
 		<div class="w-100 text-center">
 			<img src="https://augustobgm.files.wordpress.com/2020/01/programmer-illustration.png" alt="Image with programmer">

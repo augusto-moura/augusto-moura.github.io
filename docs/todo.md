@@ -11,8 +11,6 @@ A partir da API do trakt, exibir histórico recente, filmes e séries assistidas
 	* Strings do app: [Vue i18n](https://kazupon.github.io/vue-i18n/)
 	* Strings de posts: exibir/esconder classes "locale-pt-br", "locale-en", etc. Abstrair com componente `WpPostContent`
 
-* Speedrun: formatar melhor a lista de recordes, incluindo capas dos jogos, content-loader, etc.
-
 * Speedrun: lista de participações minhas em eventos + conteúdo que já fiz relacionado a speedrun (guias, vídeos).
 
 * Jogos: formatar melhor os cards com sub-áreas de jogos. Ex.: adicionar imagens para cada card.

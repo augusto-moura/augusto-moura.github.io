@@ -13,7 +13,7 @@
 					<img 
 						v-if="Array.isArray(pbsArray) && pbsArray.length > 0"
 						:src="pbsArray[0].cover" 
-						class="game-cover mb-3 mb-sm-0"
+						class="game-cover mb-3 mb-sm-0 rounded"
 					/>					
 				</div>
 				<div class="col-sm-8">
