@@ -7,39 +7,7 @@
 
 		<h1 class="my-3 text-primary">Speedrun</h1>
 
-		<p>
-			Em videogames, speedrun significa completar um objetivo dentro de um jogo no menor tempo possível. É um desafio que adiciona profundidade e dificuldade aos jogos quando comparados a playthroughs casuais, e bons resultados dependem de muita dedicação e habilidade.
-		</p>
-
-		<p>
-			Speedruns são divididos em categorias que ditam os objetivos que têm que ser alcançados e as limitações, ou seja, o que é proibido fazer. Geralmente os jogos possuem pelo menos uma categoria em que tudo é liberado, chamadas de any%, em que é permitido o uso inclusive de erros na programação, exploits, e tudo que é alcançável sem uso de ferramentas externas como cheat codes. Para os que não gostam de glitches, é muito comum existir uma categoria que não permite o uso de glitches, então tem para todos os gostos .
-		</p>
-
-		<p>
-			Links:
-		</p>
-		<ul>
-			<li>
-				<a href="http://www.speedrun.com/user/Titanish" target="_blank">
-					Meu perfil no Speedrun.com
-				</a>
-			</li>
-			<li>
-				<a href="http://megamanleaderboards.net/index.php?page=runner&name=Titanish" target="_blank">
-					Meu perfil no Mega Man Leaderboards
-				</a>
-			</li>
-			<li>
-				<a href="https://www.youtube.com/watch?v=j1jIY8LxDzs" target="_blank">
-					Guia de speedrun para iniciantes (feito por mim)
-				</a>
-			</li>
-			<li>
-				<a href="http://wiki.speedrunsbrasil.com/Gloss%C3%A1rio" target="_blank">
-					Glossário (termos utilizados) de speedrun
-				</a>
-			</li>
-		</ul>
+		<wp-page-content slug="speedrun" />
 
 		<hr>
 

@@ -1,35 +1,54 @@
-<template functional>
-	<h4 class="align-middle d-flex align-items-center">
-		<i 
-			:class="`${props.iconClass} fa-fw icone-tecnologia`" 
-			:style="`color: ${props.color}`"
-		>
-		</i> 
-		<span class="ml-2">{{ props.name }}</span>
-	</h4>
+<template>
+	<div class="card" :style="{borderColor: themeColor}">
+		<div class="card-body">
+			<div class="d-flex align-items-center mb-1">
+				<img :src="tecnologia.featured_image" class="icone-tecnologia"/>
+				<h4 
+					v-html="tecnologia.title" 
+					class="ml-3"
+					:style="{color: themeColor}"
+				></h4>
+			</div>
+			<div class="mb-2">
+				<span 
+					v-for="tag in visibleTags" 
+					:key="tag" 
+					v-html="tag"
+					class="badge mr-2 badge-secondary"
+				>
+				</span>				
+			</div>
+			<div v-html="tecnologia.content"></div>
+		</div>
+	</div>
 </template>
 
 <script>
 export default {
 	props: {
-		iconClass: {
+		tecnologia: {
 			required: true,
-			type: String
+			type: Object
+		}
+	},
+	computed: {
+		//Get title color from tag
+		themeColor(){
+			const color = Object.keys(this.tecnologia.tags).find(tag => tag.startsWith('#'));
+			return color;
 		},
-		color: {
-			required: true,
-			type: String
-		},
-		name: {
-			required: true,
-			type: String
+		visibleTags(){
+			return Object.keys(this.tecnologia.tags).filter(tag => !tag.startsWith('#'));
 		}
 	}
 }
 </script>
 
-<style>
+<style scoped>
+	.card {
+		border-width: 2px;
+	}
 	.icone-tecnologia {
-		font-size: 45px;
+		width: 45px;
 	}
 </style>
