@@ -13,8 +13,7 @@ A partir da API do trakt, exibir histórico recente, filmes e séries assistidas
 
 * Desenvolvimento web: adicionar, em cada linguagem, o que já construí usando ela, links para recursos, cursos recomendados. 
 
-* Fan games: melhorar collapse: substituir botão por uma barra para expandir.
-
-* WpPageContent: adicionar loader
-
-* Jóias do passado: adicionar loader
+* Adicionar loader:
+	* WpPageContent
+	* Jóias do passado
+	* Tecnologias de desenvolvimento

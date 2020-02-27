@@ -26,15 +26,7 @@
 				<div 
 					class="mainContent" 
 					v-html="mainContent">
-				</div>
-				<button 
-					v-if="collapseHtml"
-					class="btn btn-sm btn-primary mb-2" 
-					type="button"
-					@click="handleCollapse()"
-				>
-					Detalhes
-				</button> 
+				</div>				
 				<div v-if="collapseHtml"
 					ref="collapse"
 					:id="`collapse-fangame-${fangame.ID}`" 
@@ -47,6 +39,24 @@
 				</div>
 			</div>				
 		</div>
+		<div
+			v-if="collapseHtml"
+			id="collapser"
+			class="mt-2 d-flex justify-content-between" 
+			@click="handleCollapse()"
+		>
+
+			<div class="flex-grow-1">
+				<hr class="collapse-lines">
+			</div>
+			<div class="text-center px-3 text-primary font-weight-bold">
+				{{ collapseShown ? 'Recolher' : 'Detalhes' }}<br>
+				<i :class="'fas ' + (collapseShown ? 'fa-chevron-up' : 'fa-chevron-down')"></i>
+			</div>
+			<div class="flex-grow-1">
+				<hr class="collapse-lines">
+			</div>
+		</div> 
 	</div>
 </template>
 
@@ -90,14 +100,20 @@ export default {
 	},
 	methods: {
 		handleCollapse(){
-			this.collapseShown = true;
-			this.$nextTick(() => $(this.$refs.collapse).collapse('toggle'));
+			if(this.collapseShown){
+				$(this.$refs.collapse).collapse('toggle');	
+				this.$nextTick(() => this.collapseShown = false);
+			}
+			else{
+				this.collapseShown = true;
+				this.$nextTick(() => $(this.$refs.collapse).collapse('toggle'));
+			}
 		}
 	}
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	/* https://www.gradient-animator.com */
 	.fangame.em-desenvolvimento {
 		background: linear-gradient(270deg, #ffffe7, #fffec1);
@@ -112,5 +128,14 @@ export default {
 		height: 140px;
 		width: auto;
 		object-fit: cover;
+	}
+
+	.collapse-lines {
+		border-top: 1px solid $primary-color;
+		opacity: 40%;
+	}
+
+	#collapser {
+		cursor: pointer;
 	}
 </style>
