@@ -4,7 +4,10 @@
 			Desenvolvimento de software
 		</h2>
 
-		<wp-page-content slug="desenvolvimento-de-software" />
+		<wp-page-content 
+			slug="desenvolvimento-de-software" 
+			:loaderLines="5"
+		/>
 		
 		<hr> 
 

@@ -9,7 +9,7 @@
 			Fan games
 		</h1>
 
-		<wp-page-content slug="fan-games" />
+		<wp-page-content slug="fan-games" :loaderLines="11" />
 		
 		<pesquisa-fangames></pesquisa-fangames>
 	</div>

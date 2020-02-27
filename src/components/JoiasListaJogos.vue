@@ -17,7 +17,7 @@
 			Lista de jogos
 		</h1>
 
-		<wp-page-content slug="joias-do-passado-lista-de-jogos" />
+		<wp-page-content slug="joias-do-passado-lista-de-jogos" :loaderLines="30" />
 	</div>
 </template>
 

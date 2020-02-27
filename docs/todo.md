@@ -14,6 +14,6 @@ A partir da API do trakt, exibir histórico recente, filmes e séries assistidas
 * Desenvolvimento web: adicionar, em cada linguagem, o que já construí usando ela, links para recursos, cursos recomendados. 
 
 * Adicionar loader:
-	* WpPageContent
 	* Jóias do passado
 	* Tecnologias de desenvolvimento
+	* Fan games

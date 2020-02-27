@@ -4,16 +4,19 @@
 		v-html="page.content"
 	>
 	</div>
-	<div v-else>
-		<!-- TODO: content-loader -->
-		Carregando...
+	<div v-else class="mb-3">
+		<wp-page-content-loader :lines="loaderLines"/>
 	</div>
 </template>
 
 <script>
 export default {
 	props: {
-		slug: String
+		slug: String,
+		loaderLines: {
+			type: Number,
+			default: 4
+		}
 	},
 	data(){
 		return {

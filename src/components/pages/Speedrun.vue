@@ -7,7 +7,7 @@
 
 		<h1 class="my-3 text-primary">Speedrun</h1>
 
-		<wp-page-content slug="speedrun" />
+		<wp-page-content slug="speedrun" :loaderLines="10" />
 
 		<hr>
 
