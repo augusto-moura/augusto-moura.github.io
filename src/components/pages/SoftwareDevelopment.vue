@@ -23,6 +23,7 @@
 				class="my-2"
 			/>
 		</div>
+		<big-card-loader v-else />
 	</div>
 </template>
 

@@ -1,0 +1,27 @@
+<template>
+	<loader>
+		<div 
+			v-for="n in number"
+			:key="n"
+			class="card-loader rounded mb-2"			
+		>
+		</div>
+	</loader>
+</template>
+
+<script>
+export default {
+	props: {
+		number: {
+			type: Number,
+			default: 6
+		}
+	},
+}
+</script>
+
+<style scoped>
+	.card-loader {
+		height: 200px;
+	}
+</style>

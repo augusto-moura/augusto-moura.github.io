@@ -12,8 +12,3 @@ A partir da API do trakt, exibir histórico recente, filmes e séries assistidas
 * Speedrun: lista de participações minhas em eventos + conteúdo que já fiz relacionado a speedrun (guias, vídeos).
 
 * Desenvolvimento web: adicionar, em cada linguagem, o que já construí usando ela, links para recursos, cursos recomendados. 
-
-* Adicionar loader:
-	* Jóias do passado
-	* Tecnologias de desenvolvimento
-	* Fan games

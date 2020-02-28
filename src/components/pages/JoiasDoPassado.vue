@@ -77,6 +77,7 @@
 				</div>
 			</div>
 		</div>
+		<big-card-loader v-else class="my-2" />
 	</div>
 </template>
 
