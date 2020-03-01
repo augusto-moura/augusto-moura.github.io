@@ -3,7 +3,7 @@
 		<nav class="navbar navbar-expand-lg navbar-light bg-header-footer">
 			<router-link to="/">
 				<img
-					src="https://augustobgm.files.wordpress.com/2020/01/avatar-facebook-e1578195578588.png" 
+					:src="externalUrls.img.headerAvatar" 
 					class="avatar-circular d-flex justify-content-md-center"
 				/>
 			</router-link>

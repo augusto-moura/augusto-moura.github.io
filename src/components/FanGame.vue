@@ -77,7 +77,7 @@ export default {
 	},
 	computed: {
 		image_src: function(){
-			return this.fangame.featured_image != "" ? this.fangame.featured_image : 'https://augustobgm.files.wordpress.com/2020/01/square-image-not-found.png';
+			return this.fangame.featured_image != "" ? this.fangame.featured_image : this.externalUrls.img.squareImageNotFound;
 		},
 		isEmDesenvolvimento: function(){
 			return 'Em desenvolvimento' in this.fangame.tags;

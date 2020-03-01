@@ -7,7 +7,7 @@
 		<div class="row justify-content-center mb-3">
 			<div class="col-sm-6 col-lg-4">
 				<card-clicavel-com-imagem 
-					imagemSrc="https://augustobgm.files.wordpress.com/2020/02/desenvolvimento-card-img.png"
+					:imagemSrc="externalUrls.img.desenvolvimentoCardBanner"
 					alt="Desenvolvimento de software"
 					rota="/development"
 				>
@@ -18,7 +18,7 @@
 			</div>
 			<div class="col-sm-6 col-lg-4">
 				<card-clicavel-com-imagem 
-					imagemSrc="https://augustobgm.files.wordpress.com/2020/02/jogos-card-img.png"
+					:imagemSrc="externalUrls.img.jogosCardBanner"
 					alt="Jogos"
 					rota="/games"
 				>
@@ -30,7 +30,7 @@
 		</div>		
 
 		<div class="w-100 text-center">
-			<img src="https://augustobgm.files.wordpress.com/2020/01/programmer-illustration.png" alt="Image with programmer">
+			<img :src="externalUrls.img.homeIllustration" alt="Image with programmer">
 			<br />
 			<small class="text-muted text-secondary illustration-credit">
 				<a href="https://www.freepik.com/free-photos-vectors/design">Ilustração original criada por freepik - www.freepik.com - ligeiramente editada</a>

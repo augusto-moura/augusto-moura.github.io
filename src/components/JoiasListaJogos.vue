@@ -5,7 +5,7 @@
 			Voltar para Jóias do Passado
 			<div class="d-block text-center">
 				<img 
-					src="https://augustobgm.files.wordpress.com/2020/01/joias-do-passado-fundo-escuro.png" 
+					:src="this.externalUrls.img.joiasDoPassadoBanner" 
 					class="mb-3 rounded"
 					style="width: 350px;"
 					alt="Jóias do passado"

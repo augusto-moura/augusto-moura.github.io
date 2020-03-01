@@ -52,9 +52,9 @@ export default {
 			srcomPBs: null,
 			mmlbPBs: null,
 			mmlbCovers: {
-				'Mega Man X8': 'https://augustobgm.files.wordpress.com/2020/01/mega-man-x8.jpg',
-				'Mega Man X4': 'https://augustobgm.files.wordpress.com/2020/01/mega-man-x4.jpg',
-				'Mega Man Zero': 'https://augustobgm.files.wordpress.com/2020/01/mega-man-zero.jpg',
+				'Mega Man X8': this.externalUrls.img.megaManCovers.x8,
+				'Mega Man X4': this.externalUrls.img.megaManCovers.x4,
+				'Mega Man Zero': this.externalUrls.img.megaManCovers.zero,
 			}
 		}
 	},
@@ -78,7 +78,7 @@ export default {
 						game: pb.game.data.names.international,
 						category: pb.category.data.name,
 						time: this.formatDuration(duration(pb.run.times.primary)),
-						cover: pb.game.data.assets['cover-medium'].uri ?? 'https://augustobgm.files.wordpress.com/2020/01/square-image-not-found.png',
+						cover: pb.game.data.assets['cover-medium'].uri ?? this.externalUrls.img.squareImageNotFound,
 						url: pb.run.weblink
 					}));	
 			});
@@ -109,7 +109,7 @@ export default {
 		getMMLBCoverSrc(gameName){
 			if(gameName in this.mmlbCovers)
 				return this.mmlbCovers[gameName];
-			return 'https://augustobgm.files.wordpress.com/2020/01/square-image-not-found.png';
+			return this.externalUrls.img.squareImageNotFound;
 		},
 	},
 	mounted(){

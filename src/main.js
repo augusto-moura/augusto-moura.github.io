@@ -44,6 +44,16 @@ const router = new VueRouter({
 	}
 })
 
+import externalUrls from './resources/externalUrls';
+//Inject External URLs module into every component
+Vue.mixin({
+	computed: {
+		externalUrls(){
+			return externalUrls;
+		}
+	}
+});
+
 //Vue app
 new Vue({
 	render: h => h(App),

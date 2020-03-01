@@ -7,7 +7,7 @@
 		
 		<div class="w-100 text-center">
 			<img 
-				src="https://augustobgm.files.wordpress.com/2020/01/joias-do-passado-fundo-escuro.png" 
+				:src="externalUrls.img.joiasDoPassadoBanner" 
 				class="mb-3 rounded"
 				style="width: 350px;"
 				alt="Jóias do passado"
@@ -96,7 +96,7 @@ export default {
 			this.searchJewels();
 		},
 		searchJewels(){
-			fetch(`https://public-api.wordpress.com/rest/v1.1/sites/augustobgm.wordpress.com/posts/?category=J%C3%B3ias%20do%20passado&order_by=title&order=${this.order}&fields=ID,title,date,content,slug,featured_image,tags`, {
+			fetch(`${this.externalUrls.api.baseUrl}/posts/?category=J%C3%B3ias%20do%20passado&order_by=title&order=${this.order}&fields=ID,title,date,content,slug,featured_image,tags`, {
 				headers: new Headers({
 					'User-agent': 'Mozilla/4.0 Custom User Agent'
 				})

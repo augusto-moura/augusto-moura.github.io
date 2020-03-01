@@ -15,7 +15,7 @@
 		<div class="row justify-content-center mb-3">
 			<div class="col-sm-6 col-lg-4">
 				<card-clicavel-com-imagem
-					imagemSrc="https://augustobgm.files.wordpress.com/2020/02/backlog-card-img.png"
+					:imagemSrc="externalUrls.img.backlogCardBanner"
 					alt="Backlog"
 					hrefExterno="https://backloggery.com/88titan88"
 				>
@@ -26,7 +26,7 @@
 			</div>
 			<div class="col-sm-6 col-lg-4">
 				<card-clicavel-com-imagem
-					imagemSrc="https://augustobgm.files.wordpress.com/2020/02/speedrun-card-img.png"
+					:imagemSrc="externalUrls.img.speedrunCardBanner"
 					alt="Speedrun"
 					rota="/speedrun"
 				>
@@ -43,7 +43,7 @@
 		<div class="row justify-content-center mb-3">
 			<div class="col-sm-6 col-lg-4">
 				<card-clicavel-com-imagem
-					imagemSrc="https://augustobgm.files.wordpress.com/2020/01/joias-do-passado-fundo-escuro.png"
+					:imagemSrc="externalUrls.img.joiasDoPassadoBanner"
 					alt="Jóias do passado"
 					rota="/joias"
 				>
@@ -54,7 +54,7 @@
 			</div>
 			<div class="col-sm-6 col-lg-4">
 				<card-clicavel-com-imagem
-					imagemSrc="https://augustobgm.files.wordpress.com/2020/02/fan-games-img.png"
+					:imagemSrc="externalUrls.img.fanGamesCardBanner"
 					alt="Fan games"
 					rota="/fangames"
 				>

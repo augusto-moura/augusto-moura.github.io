@@ -54,7 +54,7 @@ export default {
 	},
 	methods: {
 		searchTagOptions(){
-			fetch(`https://public-api.wordpress.com/rest/v1.1/sites/augustobgm.wordpress.com/posts/slug:tags-fangames?fields=content`, {
+			fetch(`${this.externalUrls.api.baseUrl}/posts/slug:tags-fangames?fields=content`, {
 				headers: new Headers({
 					'User-agent': 'Mozilla/4.0 Custom User Agent'
 				})
@@ -65,7 +65,7 @@ export default {
 			});
 		},
 		searchFanGames(){
-			fetch(`https://public-api.wordpress.com/rest/v1.1/sites/augustobgm.wordpress.com/posts/?category=Fan%20Games&order_by=title&order=ASC&fields=ID,title,date,content,slug,featured_image,tags`, {
+			fetch(`${this.externalUrls.api.baseUrl}/posts/?category=Fan%20Games&order_by=title&order=ASC&fields=ID,title,date,content,slug,featured_image,tags`, {
 				headers: new Headers({
 					'User-agent': 'Mozilla/4.0 Custom User Agent'
 				})

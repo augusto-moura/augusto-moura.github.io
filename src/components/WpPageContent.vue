@@ -25,7 +25,7 @@ export default {
 	},
 	methods: {
 		getPage(){
-			fetch(`https://public-api.wordpress.com/rest/v1.1/sites/augustobgm.wordpress.com/posts/slug:${this.slug}?fields=content`, {
+			fetch(`${this.externalUrls.api.baseUrl}/posts/slug:${this.slug}?fields=content`, {
 				headers: new Headers({
 					'User-agent': 'Mozilla/4.0 Custom User Agent'
 				})

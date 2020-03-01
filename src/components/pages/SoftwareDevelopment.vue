@@ -36,7 +36,7 @@ export default {
 	},
 	methods: {
 		searchTecnologias(){
-			fetch(`https://public-api.wordpress.com/rest/v1.1/sites/augustobgm.wordpress.com/posts/?category=Tecnologia%20de%20Desenvolvimento&order_by=ID&order=ASC&fields=ID,title,date,content,slug,featured_image,tags`, {
+			fetch(`${this.externalUrls.api.baseUrl}/posts/?category=Tecnologia%20de%20Desenvolvimento&order_by=ID&order=ASC&fields=ID,title,date,content,slug,featured_image,tags`, {
 				headers: new Headers({
 					'User-agent': 'Mozilla/4.0 Custom User Agent'
 				})
