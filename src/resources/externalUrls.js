@@ -10,9 +10,9 @@ export default {
 		fanGamesCardBanner: "https://augustobgm.files.wordpress.com/2020/02/fan-games-img.png",
 		homeIllustration: "https://augustobgm.files.wordpress.com/2020/03/programmer-illustration-transp.png",
 		megaManCovers: {
-			x8: 'https://augustobgm.files.wordpress.com/2020/01/mega-man-x8.jpg',
-			x4: 'https://augustobgm.files.wordpress.com/2020/01/mega-man-x4.jpg',
-			zero: 'https://augustobgm.files.wordpress.com/2020/01/mega-man-zero.jpg',
+			'Mega Man X8': 'https://augustobgm.files.wordpress.com/2020/01/mega-man-x8.jpg',
+			'Mega Man X4': 'https://augustobgm.files.wordpress.com/2020/01/mega-man-x4.jpg',
+			'Mega Man Zero': 'https://augustobgm.files.wordpress.com/2020/01/mega-man-zero.jpg',
 		}
 	},
 	api: {

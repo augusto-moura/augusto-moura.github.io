@@ -51,11 +51,6 @@ export default {
 		return {
 			srcomPBs: null,
 			mmlbPBs: null,
-			mmlbCovers: {
-				'Mega Man X8': this.externalUrls.img.megaManCovers.x8,
-				'Mega Man X4': this.externalUrls.img.megaManCovers.x4,
-				'Mega Man Zero': this.externalUrls.img.megaManCovers.zero,
-			}
 		}
 	},
 	methods: {
@@ -107,8 +102,8 @@ export default {
 		},
 		padWithZero: number => (number+'').padStart(2, '0'),
 		getMMLBCoverSrc(gameName){
-			if(gameName in this.mmlbCovers)
-				return this.mmlbCovers[gameName];
+			if(gameName in this.externalUrls.img.megaManCovers)
+				return this.externalUrls.img.megaManCovers[gameName];
 			return this.externalUrls.img.squareImageNotFound;
 		},
 	},
