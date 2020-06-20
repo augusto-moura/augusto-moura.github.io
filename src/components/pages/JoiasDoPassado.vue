@@ -31,7 +31,7 @@
 
 		<h3 class="text-primary">Análises</h3>
 
-		<div class="btn-group" role="group" aria-label="Alterar ordem de exibição">
+		<div class="btn-group d-flex mb-3" role="group" aria-label="Alterar ordem de exibição">
 			<button 
 				:class="'btn ' + (order == 'DESC' ? 'btn-primary' : 'btn-outline-primary')" 
 				@click="changeOrder('DESC')"
@@ -51,6 +51,12 @@
 		<div
 			v-if="jewels"
 		>
+			<page-picker 
+				class="mb-3"
+				:page="page"
+				:totalPages="totalPages"
+				@changePage="changePage"
+			/>
 			<div 
 				v-for="jewel in jewels"
 				:key="jewel.ID"
@@ -76,6 +82,12 @@
 					</div>				
 				</div>
 			</div>
+			<page-picker 
+				class="mb-3"
+				:page="page"
+				:totalPages="totalPages"
+				@changePage="changePage"
+			/>
 		</div>
 		<big-card-loader v-else class="my-2" />
 	</div>
@@ -87,16 +99,26 @@ export default {
 		return {
 			order: 'DESC',
 			jewels: null,
-			foundJewels: null
+			foundJewels: null,
+			page: 1,
 		}
 	},
 	methods: {
 		changeOrder(order){
+			this.jewels = null,
+			this.foundJewels = null,
 			this.order = order;
+			this.page = 1;
+			this.searchJewels();
+		},
+		changePage(page){
+			this.jewels = null,
+			this.foundJewels = null,
+			this.page = page;
 			this.searchJewels();
 		},
 		searchJewels(){
-			fetch(`${this.externalUrls.api.baseUrl}/posts/?category=J%C3%B3ias%20do%20passado&order_by=title&order=${this.order}&fields=ID,title,date,content,slug,featured_image,tags`, {
+			fetch(`${this.externalUrls.api.baseUrl}/posts/?category=J%C3%B3ias%20do%20passado&order_by=title&order=${this.order}&per_page=20&page=${this.page}fields=ID,title,date,content,slug,featured_image,tags`, {
 				headers: new Headers({
 					'User-agent': 'Mozilla/4.0 Custom User Agent'
 				})
@@ -106,6 +128,11 @@ export default {
 				this.jewels = data.posts;
 				this.foundJewels = data.found;
 			});
+		}
+	},
+	computed: {
+		totalPages() {
+			return Math.ceil(this.foundJewels / 20);
 		}
 	},
 	mounted(){

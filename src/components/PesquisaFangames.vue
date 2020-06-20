@@ -65,7 +65,7 @@ export default {
 			});
 		},
 		searchFanGames(){
-			fetch(`${this.externalUrls.api.baseUrl}/posts/?category=Fan%20Games&order_by=title&order=ASC&fields=ID,title,date,content,slug,featured_image,tags`, {
+			fetch(`${this.externalUrls.api.baseUrl}/posts/?category=Fan%20Games&per_page=100&order_by=title&order=ASC&fields=ID,title,date,content,slug,featured_image,tags`, {
 				headers: new Headers({
 					'User-agent': 'Mozilla/4.0 Custom User Agent'
 				})
