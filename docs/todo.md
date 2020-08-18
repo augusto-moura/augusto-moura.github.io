@@ -1,4 +1,10 @@
 # TO DO
+* Usar geração de sites estáticos do Nuxt.js
+
+* Migrar para Vue 3 
+	* Usar Typescript onde for aplicável
+
+* Migrar de volta para bootstrap-vue
 
 * Nova página: Filmes e séries  
 A partir da API do trakt, exibir histórico recente, filmes e séries assistidas e/ou watchlist.

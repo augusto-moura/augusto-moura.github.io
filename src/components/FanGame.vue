@@ -51,7 +51,7 @@
 			</div>
 			<div class="text-center px-3 text-primary font-weight-bold">
 				{{ collapseShown ? 'Recolher' : 'Detalhes' }}<br>
-				<i :class="'fas ' + (collapseShown ? 'fa-chevron-up' : 'fa-chevron-down')"></i>
+				<fa :icon="['fas', (collapseShown ? 'chevron-up' : 'chevron-down')]" class="fa-fw" />
 			</div>
 			<div class="flex-grow-1">
 				<hr class="collapse-lines">

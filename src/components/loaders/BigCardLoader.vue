@@ -10,7 +10,11 @@
 </template>
 
 <script>
+import Loader from './Loader.vue'
 export default {
+	components: {
+		'loader': Loader,
+	},
 	props: {
 		number: {
 			type: Number,

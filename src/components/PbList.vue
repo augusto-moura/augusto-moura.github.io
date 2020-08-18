@@ -42,7 +42,12 @@
 </template>
 
 <script>
+import PbLoader from './loaders/PbLoader.vue'
 export default {
+	components: {
+		'pb-loader': PbLoader,
+	},
+
 	props: {
 		pbs: Object,
 		srcomLoaded: Boolean,

@@ -10,14 +10,18 @@
 </template>
 
 <script>
-	export default {
-		props: {
-			lines: {
-				type: Number,
-				default: 4
-			}
-		},
-	}
+import Loader from './Loader.vue'
+export default {
+	components: {
+		'loader': Loader,
+	},
+	props: {
+		lines: {
+			type: Number,
+			default: 4
+		}
+	},
+}
 
 </script>
 

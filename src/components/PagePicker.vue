@@ -5,7 +5,7 @@
 			class="btn btn-outline-secondary mr-3"
 			@click.prevent="$emit('changePage', page - 1)"
 		>
-			<i class="fa fa-chevron-left"></i>
+			<fa :icon="['fas', 'chevron-left']" class="fa-fw" />
 		</button>
 		<span class="text-primary font-weight-bold">
 			Página {{ page }} de {{ totalPages }}
@@ -15,7 +15,7 @@
 			class="btn btn-outline-secondary ml-3"
 			@click.prevent="$emit('changePage', page + 1)"
 		>
-			<i class="fa fa-chevron-right"></i>
+			<fa :icon="['fas', 'chevron-right']" class="fa-fw" />
 		</button>		
 	</div>
 </template>

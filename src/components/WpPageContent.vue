@@ -5,12 +5,16 @@
 	>
 	</div>
 	<div v-else class="mb-3">
-		<wp-page-content-loader :lines="loaderLines"/>
+		<wp-page-content-loader :lines="loaderLines" />
 	</div>
 </template>
 
 <script>
+import WpPageContentLoader from './loaders/WpPageContentLoader.vue'
 export default {
+	components: {
+		'wp-page-content-loader': WpPageContentLoader,
+	},
 	props: {
 		slug: String,
 		loaderLines: {

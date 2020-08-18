@@ -30,10 +30,14 @@
 </template>
 
 <script>
+import BigCardLoader from './loaders/BigCardLoader.vue'
+import FanGame from './FanGame.vue'
 import Multiselect from 'vue-multiselect'
 export default {
 	components: {
-		Multiselect
+		Multiselect,
+		FanGame,
+		BigCardLoader,
 	},
 	data(){
 		return {

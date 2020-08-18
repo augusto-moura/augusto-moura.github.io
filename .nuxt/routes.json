@@ -1,0 +1,51 @@
+[
+  {
+    "name": "development",
+    "path": "/development",
+    "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\development.vue",
+    "chunkName": "pages/development",
+    "_name": "_12e98037"
+  },
+  {
+    "name": "fangames",
+    "path": "/fangames",
+    "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\fangames.vue",
+    "chunkName": "pages/fangames",
+    "_name": "_ea8e087c"
+  },
+  {
+    "name": "games",
+    "path": "/games",
+    "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\games.vue",
+    "chunkName": "pages/games",
+    "_name": "_956bc486"
+  },
+  {
+    "name": "joias",
+    "path": "/joias",
+    "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\joias\\\\index.vue",
+    "chunkName": "pages/joias/index",
+    "_name": "_264de0d0"
+  },
+  {
+    "name": "speedrun",
+    "path": "/speedrun",
+    "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\speedrun.vue",
+    "chunkName": "pages/speedrun",
+    "_name": "_4430c618"
+  },
+  {
+    "name": "joias-lista",
+    "path": "/joias/lista",
+    "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\joias\\\\lista.vue",
+    "chunkName": "pages/joias/lista",
+    "_name": "_0d875b01"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_4870a34e"
+  }
+]

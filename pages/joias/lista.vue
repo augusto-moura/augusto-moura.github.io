@@ -22,7 +22,14 @@
 </template>
 
 <script>
+import WpPageContent from '../../src/components/WpPageContent.vue'
 export default {
+	components: {
+		WpPageContent,
+	},
+	head: {
+		title: 'Jóias do passado - lista',
+  	},
 }
 </script>
 
