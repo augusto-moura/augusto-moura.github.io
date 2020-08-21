@@ -7,6 +7,9 @@ export default {
 	css: [
 		'~/src/app_variables.scss'
 	],
+	buildModules: [
+		'@nuxtjs/vuetify',
+	],
 	modules: [
 		'@nuxtjs/style-resources',
 		[
@@ -29,7 +32,9 @@ export default {
 					},
 					{
 						set:'@fortawesome/free-brands-svg-icons',
-						icons: ['faGithub']
+						icons: [
+							'faGithub'
+						]
 					}
 			   ]
 			}
@@ -55,5 +60,9 @@ export default {
 			{ rel: 'icon', sizes: "100x100", href: '/titanishavatar100x100.png' },
 		],
 	},
-	
+	vuetify: {
+		customVariables: ['~/src/vuetify_variables.scss'],
+		treeShake: true,
+		defaultAssets: false,
+	}
 }
