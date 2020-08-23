@@ -28,6 +28,7 @@ export default {
 							'faChevronUp',
 							'faSortNumericDownAlt',
 							'faSortNumericDown',
+							'faBars',
 						]
 					},
 					{
@@ -41,7 +42,7 @@ export default {
 		]
 	],
 	styleResources: {
-		scss: ['~/src/*.scss']
+		scss: ['~/src/app.scss']
 	},
 	plugins: [
 		'~/plugins/main.js',

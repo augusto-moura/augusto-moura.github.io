@@ -30,9 +30,9 @@
 		</div>		
 
 		<div class="w-100 text-center">
-			<img :src="externalUrls.img.homeIllustration" alt="Image with programmer">
+			<img :src="externalUrls.img.homeIllustration" alt="Programmer wearing Mega Man helmet">
 			<br />
-			<small class="text-muted text-secondary illustration-credit">
+			<small class="grayed-text">
 				<a href="https://www.freepik.com/free-photos-vectors/design">Ilustração original criada por freepik - www.freepik.com - ligeiramente editada</a>
 			</small>
 		</div>
@@ -49,8 +49,5 @@ export default {
 }
 </script>
 
-<style lang="scss">
-	.illustration-credit a {
-		color: $obscured-text-color;
-	}
+<style>
 </style>

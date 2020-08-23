@@ -31,6 +31,9 @@ config.autoAddCss = false
     import  { faSortNumericDown as fortawesomefreesolidsvgicons_faSortNumericDown } from '@fortawesome/free-solid-svg-icons'
     library.add(fortawesomefreesolidsvgicons_faSortNumericDown)
 
+    import  { faBars as fortawesomefreesolidsvgicons_faBars } from '@fortawesome/free-solid-svg-icons'
+    library.add(fortawesomefreesolidsvgicons_faBars)
+
     import  { faGithub as fortawesomefreebrandssvgicons_faGithub } from '@fortawesome/free-brands-svg-icons'
     library.add(fortawesomefreebrandssvgicons_faGithub)
 

@@ -12,25 +12,55 @@
 
 @import 'app_variables.scss';
 
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
 img {
 	max-width: 100%;
 }
 
-body {
+.main-content,
+.navbar .navbar-text,
+footer {
 	font-family: Roboto, sans-serif;
 }
 
-main {
-	background-color: #f8f9fa;
+.avatar-circular {
+	vertical-align: middle;
+	width: 90px;
+	border-radius: 50%;
+	border: 2px solid $header-footer-text-color;
 }
 
-.grayed-text, .grayed-text a {
-	color: #6c757d !important;
-	text-decoration: none;
+.navbar-nav .router-link-exact-active {
+	font-weight: bold;
+	color: $active-menu-link-color;
 }
-.grayed-text a:hover,
-a.grayed-text:hover {
-	text-decoration: underline;
+
+.navbar .navbar-text:not(.router-link-exact-active) {
+	color: $header-footer-text-color;
+}
+
+.nav-link {
+	text-transform: uppercase;
+	letter-spacing: 1.25px;
+}
+
+
+
+@media (max-width: 575.8px) { 
+	.name-and-bio {
+		width: 210px;
+		margin-left: 5px;
+	}
+}
+
+@media (max-width: 400px) { 
+	.navbar-toggler {
+		width: 100%;
+		margin-top: 10px;
+		margin-bottom: 8px;
+	}
 }
 
 /* https://www.gradient-animator.com */

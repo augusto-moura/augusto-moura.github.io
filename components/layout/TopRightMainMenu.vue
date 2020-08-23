@@ -1,0 +1,32 @@
+<template>
+	<div>
+		<v-btn
+			v-for="menuItem in menu"
+			:key="menuItem.id"
+			ripple
+			large
+			text
+			link
+			rounded
+			nuxt :to="menuItem.path"
+			class="titan-primary-link"
+		>
+			<fa :icon="menuItem.icon" class="fa-fw mr-2" />
+			{{ menuItem.title }}
+		</v-btn>
+	</div>
+</template>
+
+<script>
+export default {
+	props:{
+		menu: Array,
+	},
+}
+</script>
+
+<style scoped lang="scss">
+	.titan-primary-link:not(.v-btn--active){
+		color: black !important;
+	}
+</style>
