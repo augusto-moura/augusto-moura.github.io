@@ -1,16 +1,23 @@
 <template>
-	<a :href="hrefExterno" :target="!!hrefExterno && '_blank'">
-		<div 
-			@click="rota && $router.push(rota)"
-			class="card mb-3 clickable-card border-primary"
+	<component :is="linkTag"
+		:href="hrefExterno"
+		:target="!!hrefExterno && '_blank'"
+		:to="rota"
+		class="link-with-card"
+	>
+		<v-card
+			hover
+			max-width="250px"
+			height="100%"
 		>
-			<img class="card-img-top" :src="imagemSrc" :alt="alt">
-			
-			<div class="card-body">
+			<v-img
+				:src="imagemSrc" :alt="alt"
+			/>
+			<v-card-text>
 				<slot></slot>
-			</div>
-		</div>
-	</a>
+			</v-card-text>
+		</v-card>
+	</component>
 </template>
 
 <script>
@@ -19,30 +26,50 @@ export default {
 		imagemSrc: String,
 		rota: String,
 		alt: String,
-		hrefExterno: String
+		hrefExterno: String,
+	},
+	computed: {
+		linkTag: function(){
+			return !!(this.hrefExterno) ? 
+				'a' : 
+				'nuxt-link';
+		}
 	}
 }
 </script>
 
 <style lang="scss" scoped>
-	a.link-with-card, 
-	a.link-with-card:hover{
+	
+	.link-with-card {
 		color: inherit;
 		text-decoration: inherit;
 	}
-
-	.clickable-card {
-		cursor: pointer;
+	.link-with-card .v-card:hover {
+		background-color: #af4f54;
+		animation: cardHover;
+		animation-duration: 0.6s;
+	}
+	.link-with-card .v-card:hover .v-card__text {
+		color: #ffffff;
+		animation: cardTextHover;
+		animation-duration: 0.2s;
 	}
 
-	.clickable-card:hover {
-		background-color: $primary-color;
-		color: white;
+	@keyframes cardHover {
+		from {
+			background-color: inherit;
+		}
+		to {
+			background-color: #af4f54;
+		}
 	}
 
-	@media (min-width: 576px) {
-		.clickable-card {
-			height: 100%;
+	@keyframes cardTextHover {
+		from {
+			color: inherit;
+		}
+		to {
+			color: #ffffff;
 		}
 	}
 

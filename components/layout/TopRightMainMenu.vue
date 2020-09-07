@@ -11,7 +11,7 @@
 			nuxt :to="menuItem.path"
 			class="titan-primary-link"
 		>
-			<fa :icon="menuItem.icon" class="fa-fw mr-2" />
+			<v-icon class="mr-2" v-text="menuItem.icon"></v-icon>
 			{{ menuItem.title }}
 		</v-btn>
 	</div>

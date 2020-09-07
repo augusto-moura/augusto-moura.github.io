@@ -44,13 +44,11 @@
 					md="6"
 					class="text-right"
 				>
-					<v-app-bar-nav-icon
+					<v-app-bar-nav-icon 
 						@click="mainMenuOpen = !mainMenuOpen"
 						class="d-md-none"
 						style="border: 1px solid #d5cdcd;"
-					>
-						<fa :icon="['fas', 'bars']" />
-					</v-app-bar-nav-icon>
+					/>
 
 					<div class="d-none d-md-block">
 						<top-right-main-menu :menu="menu" />						
@@ -78,9 +76,9 @@ export default {
 		return {
 			mainMenuOpen: false,
 			menu: [
-				{ id: 1, title: "Home", path: '/', icon: ['fas', 'home']},
-				{ id: 2, title: "Desenvolvimento", path: '/development', icon: ['fas', 'code'] },
-				{ id: 3, title: "Jogos", path: '/games', icon: ['fas', 'gamepad'] }
+				{ id: 1, title: "Home", path: '/', icon: 'mdi-home'},
+				{ id: 2, title: "Desenvolvimento", path: '/development', icon: 'mdi-xml' },
+				{ id: 3, title: "Jogos", path: '/games', icon: 'mdi-gamepad-variant' }
 			]
 		};
 	},

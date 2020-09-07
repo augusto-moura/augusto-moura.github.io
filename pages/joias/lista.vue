@@ -1,13 +1,22 @@
 <template>
-	<div>
+	<v-row justify="center">
+	<v-col
+		cols="12"
+		md="9"
+		lg="7"
+		xl="6"
+	>
+		<v-btn text exact nuxt to="/joias">
+			<v-icon>mdi-arrow-left</v-icon>
+			Jóias do Passado
+		</v-btn>
+
 		<nuxt-link to="/joias">
-			<fa :icon="['fas', 'chevron-left']" class="fa-fw" />
-			Voltar para Jóias do Passado
 			<div class="d-block text-center">
 				<img 
 					:src="this.externalUrls.img.joiasDoPassadoBanner" 
 					class="mb-3 rounded"
-					style="width: 350px;"
+					style="width: 250px;"
 					alt="Jóias do passado"
 				/>
 			</div>
@@ -18,7 +27,8 @@
 		</h1>
 
 		<wp-page-content slug="joias-do-passado-lista-de-jogos" :loaderLines="30" />
-	</div>
+	</v-col>
+	</v-row>
 </template>
 
 <script>

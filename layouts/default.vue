@@ -20,7 +20,7 @@
 					<a 
 						href="https://github.com/augusto-moura/augusto-moura.github.io"
 					>
-						<fa :icon="['fab', 'github']" class="fa-fw" />						
+						<v-icon>mdi-github</v-icon>
 						Código-fonte deste site
 					</a>
 				</p>

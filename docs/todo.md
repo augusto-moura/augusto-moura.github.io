@@ -1,6 +1,6 @@
 # TO DO
 
-* Migrar para Vue 3 
+* Migrar para Vue 3 ou usar Nuxt-typescript
 	* Usar Typescript onde for aplicável
 
 * Nuxt: Usar `inject` para disponibilizar `externalUrls` e outros.

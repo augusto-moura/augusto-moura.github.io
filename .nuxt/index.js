@@ -13,7 +13,6 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 /* Plugins */
 
 import nuxt_plugin_plugin_42ded423 from 'nuxt_plugin_plugin_42ded423' // Source: .\\vuetify\\plugin.js (mode: 'all')
-import nuxt_plugin_templatesplugin7a7d49fc_fb1f04aa from 'nuxt_plugin_templatesplugin7a7d49fc_fb1f04aa' // Source: .\\templates.plugin.7a7d49fc.js (mode: 'all')
 import nuxt_plugin_main_1856e168 from 'nuxt_plugin_main_1856e168' // Source: ..\\plugins\\main.js (mode: 'all')
 import nuxt_plugin_mixins_9ca86422 from 'nuxt_plugin_mixins_9ca86422' // Source: ..\\plugins\\mixins.js (mode: 'all')
 
@@ -54,7 +53,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"titleTemplate":"%s - Augusto Moura","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"theme-color","content":"#a75a5e"}],"link":[{"rel":"shortcut icon","href":"\u002Ffavicon.ico"},{"rel":"icon","sizes":"100x100","href":"\u002Ftitanishavatar100x100.png"}],"style":[],"script":[]},
+    head: {"titleTemplate":"%s - Augusto Moura","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"theme-color","content":"#a75a5e"}],"link":[{"rel":"shortcut icon","href":"\u002Ffavicon.ico"},{"rel":"icon","sizes":"100x100","href":"\u002Ftitanishavatar100x100.png"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:100,300,400,500,700,900&display=swap"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002F@mdi\u002Ffont@latest\u002Fcss\u002Fmaterialdesignicons.min.css"}],"style":[],"script":[]},
 
     router,
     nuxt: {
@@ -170,10 +169,6 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_plugin_42ded423 === 'function') {
     await nuxt_plugin_plugin_42ded423(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_templatesplugin7a7d49fc_fb1f04aa === 'function') {
-    await nuxt_plugin_templatesplugin7a7d49fc_fb1f04aa(app.context, inject)
   }
 
   if (typeof nuxt_plugin_main_1856e168 === 'function') {

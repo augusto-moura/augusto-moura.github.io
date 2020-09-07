@@ -21,9 +21,7 @@
 					class="titan-primary-link"
 				>
 					<v-list-item-icon>
-						<fa :icon="menuItem.icon" 
-							class="fa-fw"
-						/>
+						<v-icon>{{ menuItem.icon }}</v-icon>
 					</v-list-item-icon>
 					<v-list-item-title
 					>

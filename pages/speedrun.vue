@@ -1,15 +1,28 @@
 <template>
-	<div>
-		<nuxt-link to="/games">
-			<fa :icon="['fas', 'chevron-left']" class="fa-fw" />
-			Voltar para Jogos
-		</nuxt-link>
+	<v-row justify="center">
+	<v-col
+		cols="12"
+		md="9"
+		lg="7"
+		xl="6"
+	>
+		<v-btn text exact nuxt to="/games">
+			<v-icon>mdi-arrow-left</v-icon>
+			Jogos
+		</v-btn>
 
-		<h1 class="my-3 text-primary">Speedrun</h1>
+		<div class="text-center">
+			<img
+				:src="externalUrls.img.speedrunCardBanner"
+				alt="Speedrun"
+				style="width=250px;"
+				class="mb-3 rounded"
+			/>
+		</div>
 
 		<wp-page-content slug="speedrun" :loaderLines="10" />
 
-		<hr>
+		<hr class="my-4">
 
 		<p>
 			Abaixo, meus PBs (personal bests), isto é, meus recordes pessoais em cada jogo que fiz speedrun.
@@ -21,7 +34,8 @@
 		<p v-else>
 			Carregando...
 		</p>
-	</div>
+	</v-col>
+	</v-row>
 </template>
 
 <script>

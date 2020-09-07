@@ -5,44 +5,16 @@ export default {
 	},
 	target: 'static',
 	css: [
-		'~/src/app_variables.scss'
+		'~/src/app.scss'
 	],
 	buildModules: [
 		'@nuxtjs/vuetify',
 	],
 	modules: [
 		'@nuxtjs/style-resources',
-		[
-			'nuxt-fontawesome', {
-				component: 'fa',
-				imports: [
-					{
-						set: '@fortawesome/free-solid-svg-icons',
-						icons: [
-							'faHome',
-							'faCode',
-							'faGamepad',
-							'faChevronRight',
-							'faChevronLeft',
-							'faChevronDown',
-							'faChevronUp',
-							'faSortNumericDownAlt',
-							'faSortNumericDown',
-							'faBars',
-						]
-					},
-					{
-						set:'@fortawesome/free-brands-svg-icons',
-						icons: [
-							'faGithub'
-						]
-					}
-			   ]
-			}
-		]
 	],
 	styleResources: {
-		scss: ['~/src/app.scss']
+		scss: ['~/src/app_variables.scss']
 	},
 	plugins: [
 		'~/plugins/main.js',
@@ -64,6 +36,5 @@ export default {
 	vuetify: {
 		customVariables: ['~/src/vuetify_variables.scss'],
 		treeShake: true,
-		defaultAssets: false,
 	}
 }

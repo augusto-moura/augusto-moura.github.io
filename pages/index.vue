@@ -1,33 +1,40 @@
 <template>
 	<div>
-		<p class="text-center">
+		<p class="text-center mt-3">
 			Bem-vindo ao meu website!
 		</p>
-
-		<div class="row justify-content-center mb-3">
-			<div class="col-sm-6 col-lg-4">
-				<card-clicavel-com-imagem 
-					:imagemSrc="externalUrls.img.desenvolvimentoCardBanner"
-					alt="Desenvolvimento de software"
-					rota="/development"
+			<v-row justify="center">
+				<v-col
+					cols="12"
+					sm="6"
+					class="d-flex justify-center justify-sm-end"
 				>
-					<p class="text-center">
-						Aqui você pode conhecer minha carreira profissional, meus conhecimentos e opiniões como desenvolvedor.
-					</p>
-				</card-clicavel-com-imagem>
-			</div>
-			<div class="col-sm-6 col-lg-4">
-				<card-clicavel-com-imagem 
-					:imagemSrc="externalUrls.img.jogosCardBanner"
-					alt="Jogos"
-					rota="/games"
+					<card-clicavel-com-imagem 
+						:imagemSrc="externalUrls.img.desenvolvimentoCardBanner"
+						alt="Desenvolvimento de software"
+						rota="/development"
+					>
+						<p class="text-center">
+							Aqui você pode conhecer minha carreira profissional, meus conhecimentos e opiniões como desenvolvedor.
+						</p>
+					</card-clicavel-com-imagem>
+				</v-col>
+				<v-col
+					cols="12"
+					sm="6"
+					class="d-flex justify-center justify-sm-start"
 				>
-					<p class="text-center">
-						Confira o registro de todos os jogos que já joguei, Jóias do Passado, speedruns e fan games favoritos!
-					</p>
-				</card-clicavel-com-imagem>
-			</div>
-		</div>		
+					<card-clicavel-com-imagem 
+						:imagemSrc="externalUrls.img.jogosCardBanner"
+						alt="Jogos"
+						rota="/games"
+					>
+						<p class="text-center">
+							Confira o registro de todos os jogos que já joguei, Jóias do Passado, speedruns e fan games favoritos!
+						</p>
+					</card-clicavel-com-imagem>
+				</v-col>
+			</v-row>
 
 		<div class="w-100 text-center">
 			<img :src="externalUrls.img.homeIllustration" alt="Programmer wearing Mega Man helmet">
