@@ -13,17 +13,24 @@
 			group-values="tags"
 			group-label="tipo"
 			:group-select="false"
+
+			class="mt-4 mb-2"
 		/>
 
 		<div
 			v-if="filteredFangames"
 		>
-			<fan-game 
-				v-for="fangame in filteredFangames"
-				:key="fangame.ID"
-				:fangame="fangame"
-				@tagClick="applyTag($event)"
-			/>
+			<v-expansion-panels
+				v-model="panel"
+				multiple
+			>
+				<fan-game 
+					v-for="fangame in filteredFangames"
+					:key="fangame.ID"
+					:fangame="fangame"
+					@tag-click="applyTag($event)"
+				/>
+			</v-expansion-panels>
 		</div>
 		<big-card-loader v-else class="my-2"/>
 	</div>
@@ -44,7 +51,8 @@ export default {
 			fangames: null,
 			foundFangames: null,
 			appliedFilters: [],
-			filterOptions: []
+			filterOptions: [],
+			panel: [],
 		}
 	},
 	computed:{

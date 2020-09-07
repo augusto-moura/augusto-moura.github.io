@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<nuxt-link to="/joias">
-			<fa :icon="['fas', 'chevron-left']" class="fa-fw" />
+			<v-icon>mdi-arrow-left</v-icon>
 			Voltar para Jóias do Passado
 			<div class="d-block text-center">
 				<img 

@@ -1,15 +1,21 @@
 <template>
-	<div>
-		<nuxt-link to="/games">
-			<fa :icon="['fas', 'chevron-left']" class="fa-fw" />
-			Voltar para Jogos
-		</nuxt-link>
+	<v-row justify="center">
+	<v-col
+		cols="12"
+		md="9"
+		lg="7"
+		xl="6"
+	>
+		<v-btn text nuxt to="/games">
+			<v-icon>mdi-arrow-left</v-icon>
+			Jogos
+		</v-btn>
 		
 		<div class="w-100 text-center">
 			<img 
 				:src="externalUrls.img.joiasDoPassadoBanner" 
 				class="mb-3 rounded"
-				style="width: 350px;"
+				style="width: 250px;"
 				alt="Jóias do passado"
 			/>
 		</div>
@@ -27,128 +33,26 @@
 			</nuxt-link>
 		</h3>
 
-		<hr>
+		<hr class="my-4">
 
-		<h3 class="text-primary">Análises</h3>
+		<h4 class="text-h4 text-center my-4">
+			Análises
+		</h4>
 
-		<div class="btn-group d-flex mb-3" role="group" aria-label="Alterar ordem de exibição">
-			<button 
-				:class="'btn ' + (order == 'DESC' ? 'btn-primary' : 'btn-outline-primary')" 
-				@click="changeOrder('DESC')"
-			>
-				<fa :icon="['fas', 'sort-numeric-down-alt']" class="fa-fw" />				
-				Recentes primeiro
-			</button>
-			<button 
-				:class="'btn ' + (order == 'ASC' ? 'btn-primary' : 'btn-outline-primary')" 
-				@click="changeOrder('ASC')"
-			>
-				<fa :icon="['fas', 'sort-numeric-down']" class="fa-fw" />
-				Antigos primeiro
-			</button>
-		</div>
-
-		<div
-			v-if="jewels"
-		>
-			<page-picker 
-				class="mb-3"
-				:page="page"
-				:totalPages="totalPages"
-				@changePage="changePage"
-			/>
-			<div 
-				v-for="jewel in jewels"
-				:key="jewel.ID"
-				:class="'card p-3 my-2 ' + ('joia-atual' in jewel.tags ? 'joia-atual' : '')"
-			>
-				<div class="row">
-					<div class="col-sm-4 text-center">
-						<img 
-							v-if="jewel.featured_image != ''"
-							:src="jewel.featured_image"
-							class="game-cover mb-3 mb-sm-0"
-						/>
-					</div>
-					<div class="col-sm-8">
-						<h4 class="font-weight-bold">{{ jewel.title }}</h4>
-						<div v-if="'joia-atual' in jewel.tags">
-							<p>Jogando...</p>
-						</div>
-						<div 
-							v-else 
-							v-html="jewel.content"
-						/>
-					</div>				
-				</div>
-			</div>
-			<page-picker 
-				class="mb-3"
-				:page="page"
-				:totalPages="totalPages"
-				@changePage="changePage"
-			/>
-		</div>
-		<big-card-loader v-else class="my-2" />
-	</div>
+		<joias-analises />
+	</v-col>
+	</v-row>
 </template>
 
 <script>
-import BigCardLoader from '../../src/components/loaders/BigCardLoader.vue'
-import PagePicker from '../../src/components/PagePicker.vue'
+import JoiasAnalises from '../../src/components/JoiasAnalises.vue'
 export default {
 	components: {
-		PagePicker,
-		BigCardLoader,
+		JoiasAnalises,
 	},
-
 	head: {
 		title: 'Jóias do passado',
   	},
-
-	data(){
-		return {
-			order: 'DESC',
-			jewels: null,
-			foundJewels: null,
-			page: 1,
-		}
-	},
-	methods: {
-		changeOrder(order){
-			this.jewels = null,
-			this.foundJewels = null,
-			this.order = order;
-			this.page = 1;
-			this.searchJewels();
-		},
-		changePage(page){
-			this.jewels = null,
-			this.foundJewels = null,
-			this.page = page;
-			this.searchJewels();
-		},
-		searchJewels(){
-			fetch(`${this.externalUrls.api.baseUrl}/posts/?category=J%C3%B3ias%20do%20passado&order_by=title&order=${this.order}&per_page=20&page=${this.page}fields=ID,title,date,content,slug,featured_image,tags`, {
-				headers: new Headers({
-					'User-agent': 'Mozilla/4.0 Custom User Agent'
-				})
-			})
-			.then(response => response.json())
-			.then(data => {
-				this.jewels = data.posts;
-				this.foundJewels = data.found;
-			});
-		}
-	},
-	computed: {
-		totalPages() {
-			return Math.ceil(this.foundJewels / 20);
-		}
-	},
-	mounted(){
-		this.searchJewels();
-	}
 }
 </script>
 

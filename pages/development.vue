@@ -1,17 +1,29 @@
 <template>
-	<div>
-		<h2 class="text-primary">
-			Desenvolvimento de software
-		</h2>
-
+	<v-row justify="center">
+	<v-col
+		cols="12"
+		md="9"
+		lg="7"
+		xl="6"
+	>
+		<div class="text-center">
+			<img
+				:src="externalUrls.img.desenvolvimentoCardBanner"
+				alt="Desenvolvimento de software"
+				style="width=250px;"
+				class="mb-3 rounded"
+			/>
+		</div>
+		
 		<wp-page-content 
 			slug="desenvolvimento-de-software" 
 			:loaderLines="5"
 		/>
-		
 		<hr> 
 
-		<h3>Tecnologias com que já trabalhei</h3>
+		<h4 class="text-h4 text-center my-4">
+			Tecnologias com que já trabalhei
+		</h4>
 
 		<div
 			v-if="tecnologias"
@@ -24,7 +36,8 @@
 			/>
 		</div>
 		<big-card-loader v-else />
-	</div>
+	</v-col>
+	</v-row>
 </template>
 
 <script>

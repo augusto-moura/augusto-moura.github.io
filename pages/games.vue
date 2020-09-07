@@ -1,5 +1,19 @@
 <template>
-	<div>
+	<v-row justify="center">
+	<v-col
+		cols="12"
+		md="9"
+		lg="7"
+		xl="6"
+	>
+		<div class="text-center">
+			<img
+				:src="externalUrls.img.jogosCardBanner"
+				alt="Jogos"
+				style="width=250px;"
+				class="mb-3 rounded"
+			/>
+		</div>
 		<p>
 			Meu hobby favorito é o de videogames! Sou amante de jogos antigos, principalmente platformers e metroidvanias, logo, hoje em dia meu gosto combina mais com os indies.
 		</p>
@@ -10,10 +24,14 @@
 			<li>AugustoTitan</li>
 		</ul>
 
-		<hr>
+		<hr class="my-4">
 		
-		<div class="row justify-content-center mb-3">
-			<div class="col-sm-6 col-lg-4">
+		<v-row justify="center">
+			<v-col
+				cols="12"
+				sm="6"
+				class="d-flex justify-center justify-sm-end"
+			>
 				<card-clicavel-com-imagem
 					:imagemSrc="externalUrls.img.backlogCardBanner"
 					alt="Backlog"
@@ -23,8 +41,12 @@
 						Eu mantenho um registro constantemente atualizado de jogos que já joguei, zerei ou completei. Confira!
 					</p>
 				</card-clicavel-com-imagem>
-			</div>
-			<div class="col-sm-6 col-lg-4">
+			</v-col>
+			<v-col
+				cols="12"
+				sm="6"
+				class="d-flex justify-center justify-sm-start"
+			>
 				<card-clicavel-com-imagem
 					:imagemSrc="externalUrls.img.speedrunCardBanner"
 					alt="Speedrun"
@@ -37,11 +59,12 @@
 						Desde 2015, acumulei uma boa coleção de speedruns, da qual me oruglho muito!
 					</p>
 				</card-clicavel-com-imagem>
-			</div>
-		</div>
-
-		<div class="row justify-content-center mb-3">
-			<div class="col-sm-6 col-lg-4">
+			</v-col>
+			<v-col
+				cols="12"
+				sm="6"
+				class="d-flex justify-center justify-sm-end"
+			>
 				<card-clicavel-com-imagem
 					:imagemSrc="externalUrls.img.joiasDoPassadoBanner"
 					alt="Jóias do passado"
@@ -51,8 +74,12 @@
 						No Jóias do Passado, jogamos alguns jogos antigos que não joguei na época, os analisamos com nosso conhecimento atual de game design e escrevemos pequenas reviews de cada um deles.
 					</p>
 				</card-clicavel-com-imagem>
-			</div>
-			<div class="col-sm-6 col-lg-4">
+			</v-col>
+			<v-col
+				cols="12"
+				sm="6"
+				class="d-flex justify-center justify-sm-start"
+			>
 				<card-clicavel-com-imagem
 					:imagemSrc="externalUrls.img.fanGamesCardBanner"
 					alt="Fan games"
@@ -65,9 +92,10 @@
 						Aqui está uma lista de projetos feitos por fãs, curada por mim. Ela inclui apenas os que eu considero que vale conferir.
 					</p>
 				</card-clicavel-com-imagem>
-			</div>
-		</div>
-	</div>
+			</v-col>
+		</v-row>		
+	</v-col>
+	</v-row>
 </template>
 
 <script>
