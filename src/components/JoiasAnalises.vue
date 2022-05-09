@@ -43,7 +43,7 @@
 	</div>
 </template>
 
-<script>
+<script lang="ts">
 import JoiaAnalise from './JoiaAnalise.vue'
 import BigCardLoader from './loaders/BigCardLoader.vue'
 import PagePicker from './PagePicker.vue'
@@ -56,7 +56,7 @@ export default {
 	},
 	data(){
 		return {
-			order: 'DESC',
+			order: 'DESC' as string,
 			jewels: null,
 			foundJewels: null,
 			page: 1,
