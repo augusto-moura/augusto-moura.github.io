@@ -1,11 +1,13 @@
 # TO DO
 
-* Usar Nuxt-typescript
+* Migrar para Vue 3 ou usar Nuxt-typescript
 	* Usar Typescript onde for aplicável
 
 * Nuxt: Usar `inject` para disponibilizar `externalUrls` e outros.
 
 * Nuxt: usar módulos do Nuxt: axios, (mais algum?)
+
+* Abandonar bootstrap e migrar para Vuetify
 
 * Nova página: Filmes e séries  
 A partir da API do trakt, exibir histórico recente, filmes e séries assistidas e/ou watchlist.

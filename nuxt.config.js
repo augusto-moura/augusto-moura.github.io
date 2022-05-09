@@ -7,22 +7,8 @@ export default {
 	css: [
 		'~/src/app.scss'
 	],
-	build: {
-		extend(config, { isDev, isClient }) {
-			config.module.rules.push({
-				test: /\.ts$/, 
-				exclude: /node_modules/, 
-				loader: 'ts-loader'
-			});
-			// Sets webpack's mode to development if `isDev` is true.
-			if (isDev) {
-				config.mode = 'development'
-			}
-		}
-	},
 	buildModules: [
-		'@nuxt/typescript-build',
-		'@nuxtjs/vuetify'
+		'@nuxtjs/vuetify',
 	],
 	modules: [
 		'@nuxtjs/style-resources',

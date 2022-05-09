@@ -1,8 +1,7 @@
 import Vue from 'vue'
-import { decode, parsePath, withoutBase, withoutTrailingSlash, normalizeURL } from 'ufo'
 
 import { getMatchedComponentsInstances, getChildrenComponentInstancesUsingFetch, promisify, globalHandleError, urlJoin, sanitizeComponent } from './utils'
-import NuxtError from './components/nuxt-error.vue'
+
 import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
@@ -65,8 +64,7 @@ export default {
   },
   created () {
     // Add this.$nuxt in child instances
-    this.$root.$options.$nuxt = this
-
+    Vue.prototype.$nuxt = this
     if (process.client) {
       // add to window so we can listen when ready
       window.$nuxt = this
@@ -164,24 +162,15 @@ export default {
       }
       this.$loading.finish()
     },
+
     errorChanged () {
-      if (this.nuxt.err) {
-        if (this.$loading) {
-          if (this.$loading.fail) {
-            this.$loading.fail(this.nuxt.err)
-          }
-          if (this.$loading.finish) {
-            this.$loading.finish()
-          }
+      if (this.nuxt.err && this.$loading) {
+        if (this.$loading.fail) {
+          this.$loading.fail(this.nuxt.err)
         }
-
-        let errorLayout = (NuxtError.options || NuxtError).layout;
-
-        if (typeof errorLayout === 'function') {
-          errorLayout = errorLayout(this.context)
+        if (this.$loading.finish) {
+          this.$loading.finish()
         }
-
-        this.setLayout(errorLayout)
       }
     },
 
