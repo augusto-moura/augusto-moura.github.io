@@ -16,7 +16,7 @@
 		>
 			<v-container>
 				<p class="mb-1 grayed-text">
-					© 2020 Augusto Beraldi Guedes de Moura<br />
+					© 2022 Augusto Beraldi Guedes de Moura<br />
 					<a 
 						href="https://github.com/augusto-moura/augusto-moura.github.io"
 					>
@@ -31,7 +31,6 @@
 
 <script>
 import AppHeader from '../components/layout/AppHeader.vue'
-import TransitionPage from '../src/components/TransitionPage.vue'
 
 export default {
 	components: {

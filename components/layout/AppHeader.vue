@@ -33,7 +33,7 @@
 								Augusto Moura
 							</h1>
 							<span class="ml-3 d-block">
-								Desenvolvedor PHP+Vue.js e viciado em videogames
+								Desenvolvedor Web e viciado em videogames
 							</span>
 						</div>
 					</nuxt-link>
@@ -78,7 +78,8 @@ export default {
 			menu: [
 				{ id: 1, title: "Home", path: '/', icon: 'mdi-home'},
 				{ id: 2, title: "Desenvolvimento", path: '/development', icon: 'mdi-xml' },
-				{ id: 3, title: "Jogos", path: '/games', icon: 'mdi-gamepad-variant' }
+				{ id: 3, title: "Jogos", path: '/games', icon: 'mdi-gamepad-variant' },
+				{ id: 4, title: "Filmes/Séries", path: '/entertainment', icon: 'mdi-television-classic' }
 			]
 		};
 	},

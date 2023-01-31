@@ -5,7 +5,7 @@
 * Nuxt: usar módulos do Nuxt: axios, (mais algum?)
 
 * Nova página: Filmes e séries  
-A partir da API do trakt, exibir histórico recente, filmes e séries assistidas e/ou watchlist.
+A partir da API do trakt, exibir histórico recente, filmes e séries assistidas e/ou watchlist.  
 
 * Criar área para posts de blog.
 

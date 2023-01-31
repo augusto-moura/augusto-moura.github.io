@@ -5,6 +5,7 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _12e98037 = () => interopDefault(import('..\\pages\\development.vue' /* webpackChunkName: "pages/development" */))
+const _42c0e9f8 = () => interopDefault(import('..\\pages\\entertainment.vue' /* webpackChunkName: "pages/entertainment" */))
 const _ea8e087c = () => interopDefault(import('..\\pages\\fangames.vue' /* webpackChunkName: "pages/fangames" */))
 const _956bc486 = () => interopDefault(import('..\\pages\\games.vue' /* webpackChunkName: "pages/games" */))
 const _264de0d0 = () => interopDefault(import('..\\pages\\joias\\index.vue' /* webpackChunkName: "pages/joias/index" */))
@@ -27,6 +28,10 @@ export const routerOptions = {
     path: "/development",
     component: _12e98037,
     name: "development"
+  }, {
+    path: "/entertainment",
+    component: _42c0e9f8,
+    name: "entertainment"
   }, {
     path: "/fangames",
     component: _ea8e087c,

@@ -7,6 +7,13 @@
     "_name": "_12e98037"
   },
   {
+    "name": "entertainment",
+    "path": "/entertainment",
+    "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\entertainment.vue",
+    "chunkName": "pages/entertainment",
+    "_name": "_42c0e9f8"
+  },
+  {
     "name": "fangames",
     "path": "/fangames",
     "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\fangames.vue",
