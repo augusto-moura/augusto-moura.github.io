@@ -16,7 +16,7 @@
 		>
 			<v-container>
 				<p class="mb-1 grayed-text">
-					© 2022 Augusto Beraldi Guedes de Moura<br />
+					© {{ currentYear() }} Augusto Beraldi Guedes de Moura<br />
 					<a 
 						href="https://github.com/augusto-moura/augusto-moura.github.io"
 					>
@@ -38,6 +38,11 @@ export default {
 	},
 
 	name: 'app',
+	methods: {
+		currentYear(){
+			return new Date().getFullYear();
+		},
+	},
 	mounted(){
 		
 	}

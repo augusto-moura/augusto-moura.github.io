@@ -7,10 +7,10 @@
 				@change="changeOrder"
 				class="elevation-2"
 			>
-				<v-btn value="DESC">
+				<v-btn value="desc">
 					Recentes primeiro
 				</v-btn>
-				<v-btn value="ASC">
+				<v-btn value="asc">
 					Antigos primeiro
 				</v-btn>
 			</v-btn-toggle>
@@ -28,7 +28,7 @@
 
 			<joia-analise			
 				v-for="jewel in jewels"
-				:key="jewel.ID"
+				:key="jewel.id"
 				:jewel="jewel"
 			/>
 			
@@ -56,42 +56,43 @@ export default {
 	},
 	data(){
 		return {
-			order: 'DESC',
+			order: 'desc',
 			jewels: null,
 			foundJewels: null,
 			page: 1,
+			totalPages: null,
 		}
 	},
 	methods: {
-		changeOrder(order){
+		changeOrder(){
 			this.changePage(1);
 		},
 		changePage(page){
 			this.jewels = null,
 			this.foundJewels = null,
 			this.page = page;
-			this.searchJewels();
+			this.searchJewelsFromPrismic();
 		},
-		searchJewels(){
-			fetch(`${this.externalUrls.api.baseUrl}/posts/?category=J%C3%B3ias%20do%20passado&order_by=title&order=${this.order}&per_page=20&page=${this.page}fields=ID,title,date,content,slug,featured_image,tags`, {
-				headers: new Headers({
-					'User-agent': 'Mozilla/4.0 Custom User Agent'
-				})
-			})
-			.then(response => response.json())
-			.then(data => {
-				this.jewels = data.posts;
-				this.foundJewels = data.found;
-			});
+		async searchJewelsFromPrismic(){
+			const jewelsResponse = await this.$prismic.client.query(
+				this.$prismic.predicate.at('document.type','joias_do_passado'),
+				{ 
+					lang: 'pt-br',
+					pageSize: 20,
+					page: this.page,
+					orderings: `[my.joias_do_passado.numero ${this.order.toLowerCase() == 'desc' ? 'desc' : ''}]`,
+				}
+			);
+			this.jewels = jewelsResponse.results;
+			this.foundJewels = jewelsResponse.total_results_size;
+			this.totalPages = jewelsResponse.total_pages;
 		}
 	},
 	computed: {
-		totalPages() {
-			return Math.ceil(this.foundJewels / 20);
-		},
+		
 	},
 	mounted(){
-		this.searchJewels();
+		this.searchJewelsFromPrismic();
 	}
 }
 </script>
