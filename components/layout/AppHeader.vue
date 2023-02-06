@@ -33,11 +33,12 @@
 								Augusto Moura
 							</h1>
 							<span class="ml-3 d-block">
-								Desenvolvedor Web e viciado em videogames
+								{{ $t('header__author_description') }}
 							</span>
 						</div>
 					</nuxt-link>
 				</v-col>
+				
 				<v-col
 					cols="12"
 					sm="4"
@@ -51,7 +52,8 @@
 					/>
 
 					<div class="d-none d-md-block">
-						<top-right-main-menu :menu="menu" />						
+						<LanguageSwitcher :languages="languages" />
+						<top-right-main-menu :menu="menu" />
 					</div>
 				</v-col>
 			</v-row>
@@ -60,6 +62,7 @@
 		<offscreen-main-menu 
 			v-model="mainMenuOpen"
 			:menu="menu"
+			:languages="languages"
 		/>
 	</div>
 </template>
@@ -67,10 +70,12 @@
 <script>
 import TopRightMainMenu from './TopRightMainMenu.vue'
 import OffscreenMainMenu from './OffscreenMainMenu.vue'
+import LanguageSwitcher from './LanguageSwitcher.vue'
 export default {
 	components: {
 		OffscreenMainMenu,
 		TopRightMainMenu,
+		LanguageSwitcher,
 	},
 	data() {
 		return {
@@ -80,6 +85,18 @@ export default {
 				{ id: 2, title: "Desenvolvimento", path: '/development', icon: 'mdi-xml' },
 				{ id: 3, title: "Jogos", path: '/games', icon: 'mdi-gamepad-variant' },
 				{ id: 4, title: "Filmes/Séries", path: '/entertainment', icon: 'mdi-television-classic' }
+			],
+			languages: [
+				{
+					id: 'pt',
+					title: 'Português',
+					flagSrc: 'https://cdn.vuetifyjs.com/images/flags/br.png'
+				},
+				{
+					id: 'en',
+					title: 'English',
+					flagSrc: 'https://cdn.vuetifyjs.com/images/flags/us.png'
+				},
 			]
 		};
 	},

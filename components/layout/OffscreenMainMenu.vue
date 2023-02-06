@@ -14,6 +14,10 @@
 			nav
 		>
 			<v-list>
+				<v-list-item class="justify-end">
+					<LanguageSwitcher :languages="languages" />
+				</v-list-item>
+
 				<v-list-item
 					v-for="menuItem in menu"
 					:key="menuItem.id"
@@ -34,7 +38,11 @@
 </template>
 
 <script>
+import LanguageSwitcher from './LanguageSwitcher'
 export default {
+	components:{
+		LanguageSwitcher
+	},
 	model:{
 		prop: 'isOpen',
 		event: 'input',
@@ -42,6 +50,7 @@ export default {
 	props:{
 		menu: Array,
 		isOpen: Boolean,
+		languages: Array,
 	},
 	computed: {
 		isOpenComp: {

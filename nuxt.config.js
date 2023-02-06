@@ -12,6 +12,7 @@ export default {
 	],
 	modules: [
 		'@nuxtjs/style-resources',
+		'@nuxtjs/i18n'
 	],
 	styleResources: {
 		scss: ['~/src/app_variables.scss']
@@ -32,6 +33,18 @@ export default {
 			{ rel: 'shortcut icon', href: '/favicon.ico' },
 			{ rel: 'icon', sizes: "100x100", href: '/titanishavatar100x100.png' },
 		],
+	},
+	i18n: {
+		locales: [
+			{ code: 'pt', iso: 'pt-BR', file: 'pt.js'},
+			{ code: 'en', iso: 'en-US', file: 'en.js' },
+		],
+		defaultLocale: 'pt',
+		strategy: 'prefix_except_default',
+		langDir: '~/lang/',
+		vueI18n: {
+			fallbackLocale: 'pt',
+		}
 	},
 	vuetify: {
 		customVariables: ['~/src/vuetify_variables.scss'],
