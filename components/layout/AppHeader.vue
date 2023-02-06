@@ -17,7 +17,7 @@
 					md="6"
 					class="d-flex align-items-center"
 				>
-					<nuxt-link to="/">
+					<nuxt-link :to="localePath('/')">
 						<v-avatar
 						size="90"
 						>
@@ -27,7 +27,7 @@
 							/>
 						</v-avatar>
 					</nuxt-link>
-					<nuxt-link to="/" class="titan-primary-link">
+					<nuxt-link :to="localePath('/')" class="titan-primary-link">
 						<div class="d-inline-block name-and-bio pt-1">
 							<h1 class="ml-3 pb-0 mb-0 d-block">
 								Augusto Moura
@@ -81,10 +81,10 @@ export default {
 		return {
 			mainMenuOpen: false,
 			menu: [
-				{ id: 1, title: "Home", path: '/', icon: 'mdi-home'},
-				{ id: 2, title: "Desenvolvimento", path: '/development', icon: 'mdi-xml' },
-				{ id: 3, title: "Jogos", path: '/games', icon: 'mdi-gamepad-variant' },
-				{ id: 4, title: "Filmes/Séries", path: '/entertainment', icon: 'mdi-television-classic' }
+				{ id: 1, title: 'home', path: '/', icon: 'mdi-home'},
+				{ id: 2, title: "development", path: '/development', icon: 'mdi-xml' },
+				{ id: 3, title: "games", path: '/games', icon: 'mdi-gamepad-variant' },
+				{ id: 4, title: "entertainment", path: '/entertainment', icon: 'mdi-television-classic' }
 			],
 			languages: [
 				{

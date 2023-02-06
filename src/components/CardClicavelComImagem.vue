@@ -2,7 +2,7 @@
 	<component :is="linkTag"
 		:href="hrefExterno"
 		:target="!!hrefExterno && '_blank'"
-		:to="rota"
+		:to="finalUrl"
 		class="link-with-card"
 	>
 		<v-card
@@ -30,9 +30,12 @@ export default {
 	},
 	computed: {
 		linkTag: function(){
-			return !!(this.hrefExterno) ? 
+			return (this.hrefExterno) ? 
 				'a' : 
 				'nuxt-link';
+		},
+		finalUrl: function(){
+			return (this.hrefExterno) ? this.rota : this.localePath(this.rota);
 		}
 	}
 }

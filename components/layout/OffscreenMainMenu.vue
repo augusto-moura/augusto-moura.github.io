@@ -21,7 +21,7 @@
 				<v-list-item
 					v-for="menuItem in menu"
 					:key="menuItem.id"
-					nuxt :to="menuItem.path"
+					nuxt exact :to="localePath(menuItem.path)"
 					class="titan-primary-link"
 				>
 					<v-list-item-icon>
@@ -29,7 +29,7 @@
 					</v-list-item-icon>
 					<v-list-item-title
 					>
-						{{ menuItem.title }}
+						{{ $t(menuItem.title) }}
 					</v-list-item-title>
 				</v-list-item>
 			</v-list>

@@ -8,11 +8,13 @@
 			text
 			link
 			rounded
-			nuxt :to="menuItem.path"
+			nuxt
+			:exact="menuItem.path == '/'"
+			:to="localePath(menuItem.path)"
 			class="titan-primary-link"
 		>
 			<v-icon class="mr-2" v-text="menuItem.icon"></v-icon>
-			{{ menuItem.title }}
+			{{ $t(menuItem.title) }}
 		</v-btn>
 	</div>
 </template>

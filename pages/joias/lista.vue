@@ -6,12 +6,12 @@
 		lg="7"
 		xl="6"
 	>
-		<v-btn text exact nuxt to="/joias">
+		<v-btn text exact nuxt :to="localePath('/joias')">
 			<v-icon>mdi-arrow-left</v-icon>
 			Jóias do Passado
 		</v-btn>
 
-		<nuxt-link to="/joias">
+		<nuxt-link :to="localePath('/joias')">
 			<div class="d-block text-center">
 				<img 
 					:src="this.externalUrls.img.joiasDoPassadoBanner" 

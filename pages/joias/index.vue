@@ -6,9 +6,9 @@
 		lg="7"
 		xl="6"
 	>
-		<v-btn text nuxt to="/games">
+		<v-btn text nuxt :to="localePath('/games')">
 			<v-icon>mdi-arrow-left</v-icon>
-			Jogos
+			{{ $t('games') }}
 		</v-btn>
 		
 		<div class="w-100 text-center">

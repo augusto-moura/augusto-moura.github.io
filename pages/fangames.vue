@@ -6,7 +6,7 @@
 		lg="7"
 		xl="6"
 	>
-		<v-btn text exact nuxt to="/games">
+		<v-btn text exact nuxt :to="localePath('/games')">
 			<v-icon>mdi-arrow-left</v-icon>
 			Jogos
 		</v-btn>

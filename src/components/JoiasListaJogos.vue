@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<nuxt-link to="/joias">
+		<nuxt-link :to="localePath('/joias')">
 			<v-icon>mdi-arrow-left</v-icon>
 			Voltar para Jóias do Passado
 			<div class="d-block text-center">
