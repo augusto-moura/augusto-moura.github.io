@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<p class="text-center mt-3">
-			Bem-vindo ao meu website!
+			{{ $t('home__welcome') }}
 		</p>
 			<v-row justify="center">
 				<v-col

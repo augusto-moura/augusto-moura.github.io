@@ -8,10 +8,10 @@
 				class="elevation-2"
 			>
 				<v-btn value="desc">
-					Recentes primeiro
+					{{ $t('pagination__newest_first') }}
 				</v-btn>
 				<v-btn value="asc">
-					Antigos primeiro
+					{{ $t('pagination__oldest_first') }}
 				</v-btn>
 			</v-btn-toggle>
 		</v-row>
@@ -73,11 +73,17 @@ export default {
 			this.page = page;
 			this.searchJewelsFromPrismic();
 		},
+		getLangForPrismic() {
+			const locale = this.$i18n.locale;
+			if(locale == 'en') 
+				return 'en-us';
+			return 'pt-br';
+		},
 		async searchJewelsFromPrismic(){
 			const jewelsResponse = await this.$prismic.client.query(
 				this.$prismic.predicate.at('document.type','joias_do_passado'),
 				{ 
-					lang: 'pt-br',
+					lang: this.getLangForPrismic(),
 					pageSize: 20,
 					page: this.page,
 					orderings: `[my.joias_do_passado.numero ${this.order.toLowerCase() == 'desc' ? 'desc' : ''}]`,
