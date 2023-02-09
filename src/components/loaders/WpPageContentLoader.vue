@@ -3,7 +3,7 @@
 		<div 
 			v-for="n in lines"
 			:key="n"			
-			class="loader-wp-page-content rounded mb-2"
+			:class="`loader-wp-page-content rounded mb-2 my-${verticalSpacing}`"
 		>
 		</div>
 	</loader>
@@ -19,6 +19,10 @@ export default {
 		lines: {
 			type: Number,
 			default: 4
+		},
+		verticalSpacing: {
+			type: Number,
+			default: 0,
 		}
 	},
 }

@@ -45,11 +45,11 @@ import TecnologiaQueJaTrabalhei from '../src/components/TecnologiaQueJaTrabalhei
 import WpPageContent from '../src/components/WpPageContent.vue'
 import BigCardLoader from '../src/components/loaders/BigCardLoader.vue'
 export default {
-	components: { WpPageContent, TecnologiaQueJaTrabalhei, BigCardLoader, TecnologiaQueJaTrabalhei },
+	components: { WpPageContent, TecnologiaQueJaTrabalhei, BigCardLoader},
 
 	head: {
 		title: 'Desenvolvimento',
-  	},
+	},
 
 	data(){
 		return {

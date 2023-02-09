@@ -15,21 +15,23 @@
 				<h2 class="mb-4">Últimos filmes/séries assistidos:</h2>
 
 				<div v-if="watchHistoryItems">
-					<div v-for="watchHistoryItem in watchHistoryItems"
+					<trakt-watch-history-item 
+						v-for="watchHistoryItem in watchHistoryItems"
 						:key="watchHistoryItem.id"
-					>
-						<p v-if="watchHistoryItem.type == 'episode'">
-							<strong>- {{ watchHistoryItem.show.title }}</strong>
-							- 
-							s{{ watchHistoryItem.episode.season }}
-							e{{ watchHistoryItem.episode.number }}
-							-
-							{{ watchHistoryItem.episode.title }} 
-							<!-- ({{ formatDate(watchHistoryItem.watched_at) }}) -->
-							({{ formatDate(watchHistoryItem.watched_at) }})
-						</p>
-					</div>
+						:historyItem="watchHistoryItem"
+					/>
 				</div>
+				<wp-page-content-loader v-else 
+					:lines="10" 
+					:verticalSpacing="3" 
+				/>
+
+				<v-btn text color="primary" class="mt-3"
+					href="https://trakt.tv/users/augustomoura/history"
+					target="_blank"
+				>
+					Conferir histórico completo...
+				</v-btn>
 			</v-card-text>
 		</v-card>
 		
@@ -38,10 +40,14 @@
 </template>
 
 <script>
-import moment from 'moment';
 import {getTraktWatchHistory} from '../src/resources/traktApi';
+import TraktWatchHistoryItem from '../src/components/TraktWatchHistoryItem.vue';
+import WpPageContentLoader from '../src/components/loaders/WpPageContentLoader.vue'
+
 export default {
 	components: {
+		TraktWatchHistoryItem,
+		WpPageContentLoader,
 	},
 
 	head: {
@@ -50,14 +56,12 @@ export default {
 
 	data(){
 		return {
-			watchHistoryItems: [],
+			watchHistoryItems: null,
 		}
 	},
 	methods: {
 		getTraktWatchHistory,
-		formatDate(dateYmd){
-			return moment(dateYmd).format('DD/MM/yy');
-		}
+		
 	},
 	async mounted(){
 		this.watchHistoryItems = await this.getTraktWatchHistory();
