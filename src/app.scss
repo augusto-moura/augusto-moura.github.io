@@ -70,3 +70,11 @@ a.grayed-text:hover {
 	50%{background-position:100% 50%}
 	100%{background-position:0% 50%}
 }
+
+.w-100 {
+	width: 100% !important;
+}
+
+.trakt-watch-history-item .v-btn__content {
+	width: 100% !important;
+}

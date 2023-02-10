@@ -1,7 +1,7 @@
 <template>
-	<div class="d-block">
-		<v-btn text :href="url" target="_blank">
-			<span v-if="isSeriesEpisode">
+	<div class="d-block trakt-watch-history-item">
+		<v-btn text left large :href="url" target="_blank" class="no-text-transform">
+			<span v-if="isSeriesEpisode" class="text-wrap ma-auto">
 				<strong>- {{ historyItem.show.title }}</strong>
 				- 
 				s{{ historyItem.episode.season }}
@@ -10,7 +10,7 @@
 				{{ historyItem.episode.title }} 
 				({{ formatDate(historyItem.watched_at) }})
 			</span>
-			<span v-if="isMovie">
+			<span v-if="isMovie" class="text-wrap ma-auto">
 				<strong>- {{ historyItem.movie.title }}</strong>
 				({{ formatDate(historyItem.watched_at) }})
 			</span>

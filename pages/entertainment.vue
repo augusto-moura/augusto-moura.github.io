@@ -23,7 +23,7 @@
 				</div>
 				<wp-page-content-loader v-else 
 					:lines="10" 
-					:verticalSpacing="3" 
+					:verticalSpacing="5" 
 				/>
 
 				<v-btn text color="primary" class="mt-3"
