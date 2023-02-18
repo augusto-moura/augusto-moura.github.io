@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/entertainment", {data:[{}],fetch:{},mutations:void 0});
