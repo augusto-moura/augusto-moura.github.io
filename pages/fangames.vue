@@ -8,7 +8,7 @@
 	>
 		<v-btn text exact nuxt :to="localePath('/games')">
 			<v-icon>mdi-arrow-left</v-icon>
-			Jogos
+			{{ $t('games') }}
 		</v-btn>
 
 		<div class="text-center">

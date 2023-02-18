@@ -7,12 +7,12 @@
 		xl="6"
 	>
 		<div class="text-center">
-			<h1>Filmes/Séries</h1>
+			<h1>{{ $t('entertainment')}}</h1>
 		</div>
 
 		<v-card>
 			<v-card-text>
-				<h2 class="mb-4">Últimos filmes/séries assistidos:</h2>
+				<h2 class="mb-4">{{ $t('entertainment__recently_watched') }}:</h2>
 
 				<div v-if="watchHistoryItems">
 					<trakt-watch-history-item 
@@ -30,7 +30,7 @@
 					href="https://trakt.tv/users/augustomoura/history"
 					target="_blank"
 				>
-					Conferir histórico completo...
+					{{ $t('entertainment__view_full_watch_history') }}...
 				</v-btn>
 			</v-card-text>
 		</v-card>

@@ -15,7 +15,7 @@
 						rota="/development"
 					>
 						<p class="text-center">
-							Aqui você pode conhecer minha carreira profissional, meus conhecimentos e opiniões como desenvolvedor.
+							{{ $t('home__development') }}
 						</p>
 					</card-clicavel-com-imagem>
 				</v-col>
@@ -30,7 +30,7 @@
 						rota="/games"
 					>
 						<p class="text-center">
-							Confira o registro de todos os jogos que já joguei, Jóias do Passado, speedruns e fan games favoritos!
+							{{ $t('home__games') }}
 						</p>
 					</card-clicavel-com-imagem>
 				</v-col>
@@ -40,7 +40,9 @@
 			<img :src="externalUrls.img.homeIllustration" alt="Programmer wearing Mega Man helmet">
 			<br />
 			<small class="grayed-text">
-				<a href="https://www.freepik.com/free-photos-vectors/design">Ilustração original criada por freepik - www.freepik.com - ligeiramente editada</a>
+				<a href="https://www.freepik.com/free-photos-vectors/design">
+					{{ $t('home__freepik_credit') }}
+				</a>
 			</small>
 		</div>
 	</div>

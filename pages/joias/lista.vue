@@ -8,7 +8,7 @@
 	>
 		<v-btn text exact nuxt :to="localePath('/joias')">
 			<v-icon>mdi-arrow-left</v-icon>
-			Jóias do Passado
+			{{ $t('jewels_of_the_past') }}
 		</v-btn>
 
 		<nuxt-link :to="localePath('/joias')">
@@ -23,7 +23,7 @@
 		</nuxt-link>
 
 		<h1 class="my-3 text-primary">
-			Lista de jogos
+			{{ $t('jewels__game_list')}}
 		</h1>
 
 		<wp-page-content slug="joias-do-passado-lista-de-jogos" :loaderLines="30" />

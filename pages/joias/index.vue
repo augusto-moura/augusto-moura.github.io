@@ -24,7 +24,7 @@
 
 		<h3 class="text-center">
 			<nuxt-link :to="localePath('/joias/lista')" class="text-primary">
-				<u>{{ $t('jewels__game_list') }}</u>
+				<u>{{ $t('jewels__game_list_link') }}</u>
 			</nuxt-link>
 		</h3>
 

@@ -22,7 +22,7 @@
 		<hr> 
 
 		<h4 class="text-h4 text-center my-4">
-			Tecnologias com que já trabalhei
+			{{ $t('development__technologies_ive_worked_with') }}
 		</h4>
 
 		<div

@@ -8,7 +8,7 @@
 	>
 		<v-btn text exact nuxt :to="localePath('/games')">
 			<v-icon>mdi-arrow-left</v-icon>
-			Jogos
+			{{ $t('games') }}
 		</v-btn>
 
 		<div class="text-center">
@@ -25,14 +25,14 @@
 		<hr class="my-4">
 
 		<p>
-			Abaixo, meus PBs (personal bests), isto é, meus recordes pessoais em cada jogo que fiz speedrun.
+			{{ $t('speedrun__pbs_description') }}
 		</p>
 
 		<div v-if="pbs">
 			<pb-list :pbs="pbs" :srcomLoaded="srcomLoaded" :mmlbLoaded="mmlbLoaded" />
 		</div>
 		<p v-else>
-			Carregando...
+			{{ $t('loading') }}...
 		</p>
 	</v-col>
 	</v-row>

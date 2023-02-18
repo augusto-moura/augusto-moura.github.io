@@ -3,112 +3,96 @@
     "name": "development___pt",
     "path": "/development",
     "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\development.vue",
-    "chunkName": "pages/development",
-    "_name": "_12e98037"
+    "chunkName": "pages/development"
   },
   {
     "name": "index___en",
     "path": "/en",
     "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_4870a34e"
+    "chunkName": "pages/index"
   },
   {
     "name": "entertainment___pt",
     "path": "/entertainment",
     "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\entertainment.vue",
-    "chunkName": "pages/entertainment",
-    "_name": "_42c0e9f8"
+    "chunkName": "pages/entertainment"
   },
   {
     "name": "fangames___pt",
     "path": "/fangames",
     "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\fangames.vue",
-    "chunkName": "pages/fangames",
-    "_name": "_ea8e087c"
+    "chunkName": "pages/fangames"
   },
   {
     "name": "games___pt",
     "path": "/games",
     "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\games.vue",
-    "chunkName": "pages/games",
-    "_name": "_956bc486"
+    "chunkName": "pages/games"
   },
   {
     "name": "joias___pt",
     "path": "/joias",
     "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\joias\\\\index.vue",
-    "chunkName": "pages/joias/index",
-    "_name": "_264de0d0"
+    "chunkName": "pages/joias/index"
   },
   {
     "name": "speedrun___pt",
     "path": "/speedrun",
     "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\speedrun.vue",
-    "chunkName": "pages/speedrun",
-    "_name": "_4430c618"
+    "chunkName": "pages/speedrun"
   },
   {
     "name": "development___en",
     "path": "/en/development",
     "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\development.vue",
-    "chunkName": "pages/development",
-    "_name": "_12e98037"
+    "chunkName": "pages/development"
   },
   {
     "name": "entertainment___en",
     "path": "/en/entertainment",
     "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\entertainment.vue",
-    "chunkName": "pages/entertainment",
-    "_name": "_42c0e9f8"
+    "chunkName": "pages/entertainment"
   },
   {
     "name": "fangames___en",
     "path": "/en/fangames",
     "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\fangames.vue",
-    "chunkName": "pages/fangames",
-    "_name": "_ea8e087c"
+    "chunkName": "pages/fangames"
   },
   {
     "name": "games___en",
     "path": "/en/games",
     "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\games.vue",
-    "chunkName": "pages/games",
-    "_name": "_956bc486"
+    "chunkName": "pages/games"
   },
   {
     "name": "joias___en",
     "path": "/en/joias",
     "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\joias\\\\index.vue",
-    "chunkName": "pages/joias/index",
-    "_name": "_264de0d0"
+    "chunkName": "pages/joias/index"
   },
   {
     "name": "speedrun___en",
     "path": "/en/speedrun",
     "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\speedrun.vue",
-    "chunkName": "pages/speedrun",
-    "_name": "_4430c618"
+    "chunkName": "pages/speedrun"
   },
   {
     "name": "joias-lista___pt",
     "path": "/joias/lista",
     "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\joias\\\\lista.vue",
-    "chunkName": "pages/joias/lista",
-    "_name": "_0d875b01"
+    "chunkName": "pages/joias/lista"
   },
   {
     "name": "joias-lista___en",
     "path": "/en/joias/lista",
     "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\joias\\\\lista.vue",
-    "chunkName": "pages/joias/lista",
-    "_name": "_0d875b01"
+    "chunkName": "pages/joias/lista"
   },
   {
     "name": "index___pt",
     "path": "/",
     "component": "C:\\\\Users\\\\Pessoal\\\\Desenvolvimento\\\\augusto-moura.github.io\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_4870a34e"
+    "chunkName": "pages/index"
   }
 ]
